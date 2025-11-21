@@ -4,162 +4,241 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JobsProducts</title>
+
 <style>
-  /* Tipografía y fondo */
   body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: linear-gradient(135deg, #dbeafe, #f0f9ff, #e0f2fe);
     color: #111827;
     overflow-x: hidden;
   }
 
-  /* HEADER */
+  /* Header */
   header {
-    background: linear-gradient(90deg,#2563eb,#3b82f6);
+    background: linear-gradient(90deg, #1e40af, #2563eb, #3b82f6);
     color: #fff;
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
   }
 
-  header h1 { font-size: 2.4em; margin:0; animation: fadeInDown 1s ease forwards; }
-  header p { margin-top:10px; animation: fadeInDown 1.2s ease forwards; }
+  header h1 {
+    font-size: 2.8em;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  header p {
+    margin-top: 12px;
+    font-size: 1.2em;
+    opacity: 0.95;
+  }
 
   /* Language selector */
-  .language-box { text-align:right; padding:10px 20px; background:#e5e7eb; font-size:16px; }
-  select { padding:6px 10px; border-radius:6px; font-size:16px; }
-
-  /* Main content */
-  main { max-width: 1000px; margin: auto; padding:20px; }
-
-  /* Componente reusable: Producto */
-  .product {
-    background:#fff;
-    border-radius:12px;
-    padding:25px;
-    margin-bottom:25px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity:0; transform:translateY(30px);
-    animation: fadeInUp 0.8s forwards;
+  .language-box {
+    text-align: right;
+    padding: 12px 20px;
+    background: #e0e7ff;
+    font-size: 16px;
   }
-  .product:hover { transform: translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.15); }
 
-  .product h2 { margin-top:0; }
-  .btn { display:inline-block; padding:12px 20px; background:#2563eb; color:#fff; text-decoration:none; border-radius:8px; font-weight:600; transition: background 0.3s ease; }
-  .btn:hover { background:#3b82f6; }
+  select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: 1px solid #64748b;
+  }
+
+  /* Main */
+  main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+  }
 
   /* Video */
-  .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius:12px; margin-bottom:30px; }
-  .video-container iframe { position:absolute; top:0; left:0; width:100%; height:100%; }
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
 
-  /* Formulario */
-  .form-box { background:#fff; padding:25px; border-radius:12px; margin-bottom:30px; box-shadow:0 5px 15px rgba(0,0,0,0.1); opacity:0; transform:translateY(30px); animation: fadeInUp 0.8s forwards; }
-  .form-box input { width:100%; padding:12px; margin:10px 0; border-radius:6px; border:1px solid #999; font-size:16px; }
-  .form-box p { font-size:14px; color:#333; }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-  /* Testimonios */
-  .testimonial { background:#e5e7eb; padding:20px; border-radius:10px; margin-bottom:20px; font-style:italic; opacity:0; transform:translateY(30px); animation: fadeInUp 0.8s forwards; }
+  /* IMAGEN EXTRA */
+  .image-section {
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  .image-section img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  /* Product Card */
+  .product {
+    background: #ffffffcc;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 35px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    backdrop-filter: blur(6px);
+    animation: fadeInUp 0.7s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .product h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #1e3a8a;
+  }
+
+  .product img {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 15px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 14px 22px;
+    background: #1d4ed8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  }
+
+  .btn:hover {
+    background: #3b82f6;
+    transform: translateY(-3px);
+  }
+
+  /* Testimonials */
+  .testimonial {
+    background: #e2e8f0;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    font-style: italic;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    animation: fadeInUp 0.7s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
 
   /* Footer */
-  footer { text-align:center; padding:20px; background:#111827; color:white; margin-top:40px; }
+  footer {
+    text-align: center;
+    padding: 25px;
+    background: #1e293b;
+    color: white;
+    margin-top: 40px;
+  }
 
-  /* Animaciones */
-  @keyframes fadeInDown { 0% {opacity:0; transform:translateY(-20px);} 100% {opacity:1; transform:translateY(0);} }
-  @keyframes fadeInUp { 0% {opacity:0; transform:translateY(30px);} 100% {opacity:1; transform:translateY(0);} }
+  /* Animation */
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 </style>
 </head>
 <body>
 
-<!-- Language selector -->
+<!-- Language Selector -->
 <div class="language-box">
-  <label for="language-select"><strong>🌐 Language / Idioma:</strong></label>
+  <label><strong>🌐 Language / Idioma:</strong></label>
   <select id="language-select" onchange="changeLanguage()">
     <option value="es">Español</option>
     <option value="en">English</option>
   </select>
 </div>
 
+<!-- HEADER -->
 <header>
   <h1 data-es="Bienvenido a JobsProducts" data-en="Welcome to JobsProducts">Bienvenido a JobsProducts</h1>
   <p data-es="Encuentra productos que realmente mejoran tu vida." data-en="Find products that truly improve your life.">Encuentra productos que realmente mejoran tu vida.</p>
 </header>
 
 <main>
-  <!-- Video de presentación -->
+
+  <!-- Video -->
   <div class="video-container">
     <iframe src="https://www.youtube.com/embed/tu_video_aqui" frameborder="0" allowfullscreen></iframe>
   </div>
 
-  <!-- Productos Reusables -->
-  <div class="product" data-es-title="Almohadilla Térmica con Biocristales" data-en-title="Thermal Pad with Biocrystals" data-es-desc="Relaja músculos, mejora la circulación y alivia el dolor de forma natural." data-en-desc="Relaxes muscles, improves circulation, and relieves pain naturally.">
+  <!-- Imagen extra superior -->
+  <div class="image-section">
+    <img src="https://via.placeholder.com/900x400?text=Tu+Imagen+Aqui" alt="Imagen superior">
+  </div>
+
+  <!-- PRODUCTO 1 -->
+  <div class="product">
     <h2>Almohadilla Térmica con Biocristales</h2>
     <p>Relaja músculos, mejora la circulación y alivia el dolor de forma natural.</p>
-    <a class="btn" href="#" data-es="Comprar ahora" data-en="Buy now">Comprar ahora</a>
+    <a class="btn" href="https://wa.link/emv45g">Más información</a>
   </div>
 
-  <div class="product" data-es-title="Colchoneta Energética SleepM" data-en-title="SleepM Energy Mat" data-es-desc="Ideal para descansar profundamente y recuperar energía mientras duermes." data-en-desc="Perfect for deep rest and energy recovery while you sleep.">
+  <!-- PRODUCTO 2 con IMAGEN EXTRA -->
+  <div class="product">
     <h2>Colchoneta Energética SleepM</h2>
     <p>Ideal para descansar profundamente y recuperar energía mientras duermes.</p>
-    <a class="btn" href="#" data-es="Ver detalles" data-en="See details">Ver detalles</a>
+    <img src="https://via.placeholder.com/900x400?text=Colchoneta+SleepM" alt="Imagen colchoneta">
+    <a class="btn" href="https://wa.link/emv45g">Solicitar detalles</a>
   </div>
 
-  <div class="product" data-es-title="Gana dinero recomendando productos" data-en-title="Earn money recommending products" data-es-desc="Únete a nuestra red y construye ingresos desde tu teléfono." data-en-desc="Join our network and build income from your phone.">
+  <!-- PRODUCTO 3 -->
+  <div class="product">
     <h2>Gana dinero recomendando productos</h2>
     <p>Únete a nuestra red y construye ingresos desde tu teléfono.</p>
-    <a class="btn" href="#" data-es="Unirme ahora" data-en="Join now">Unirme ahora</a>
+    <a class="btn" href="https://wa.link/emv45g">Unirme ahora</a>
   </div>
 
-  <!-- Formulario de registro -->
-  <div class="form-box">
-    <h2 data-es="Únete a la comunidad" data-en="Join the Community">Únete a la comunidad</h2>
-    <input type="text" placeholder="Tu nombre" id="nameField" data-es-placeholder="Tu nombre" data-en-placeholder="Your name">
-    <input type="email" placeholder="Tu correo" id="emailField" data-es-placeholder="Tu correo" data-en-placeholder="Your email">
-    <input type="text" placeholder="WhatsApp (opcional)" id="whatsappField" data-es-placeholder="WhatsApp (opcional)" data-en-placeholder="WhatsApp (optional)">
-    <a class="btn" href="#" id="sendRegister" data-es="Enviar registro" data-en="Submit registration">Enviar registro</a>
-    <p id="safeText" data-es="Tu información está segura. No enviamos spam." data-en="Your information is safe. No spam.">Tu información está segura. No enviamos spam.</p>
-  </div>
-
-  <!-- Testimonios -->
-  <div class="testimonial" data-es="“Aprendí desde cero y ya lancé mi primer proyecto.” – María G." data-en="“I learned from scratch and already launched my first project.” – María G.">“Aprendí desde cero y ya lancé mi primer proyecto.” – María G.</div>
-  <div class="testimonial" data-es="“La comunidad me ayudó a avanzar. No estás solo.” – Carlos R." data-en="“The community helped me move forward. You're not alone.” – Carlos R.">“La comunidad me ayudó a avanzar. No estás solo.” – Carlos R.</div>
-  <div class="testimonial" data-es="“Práctico y real. Lo recomiendo.” – Ana L." data-en="“Practical and real. I recommend it.” – Ana L.">“Práctico y real. Lo recomiendo.” – Ana L.</div>
+  <!-- TESTIMONIOS -->
+  <div class="testimonial">“Aprendí desde cero y ya lancé mi primer proyecto.” – María G.</div>
+  <div class="testimonial">“La comunidad me ayudó a avanzar. No estás solo.” – Carlos R.</div>
+  <div class="testimonial">“Práctico y real. Lo recomiendo.” – Ana L.</div>
 
 </main>
 
 <footer>
-  <p data-es="© 2025 JobsProducts. Todos los derechos reservados." data-en="© 2025 JobsProducts. All rights reserved.">© 2025 JobsProducts. Todos los derechos reservados.</p>
+  © 2025 JobsProducts. Todos los derechos reservados.
 </footer>
 
 <script>
 function changeLanguage() {
   const lang = document.getElementById("language-select").value;
-
-  // Cambiar todos los elementos con data-es
   document.querySelectorAll("[data-es]").forEach(el => {
-    if(el.tagName === "INPUT") {
-      el.placeholder = el.getAttribute("data-" + lang + "-placeholder");
-    } else {
-      el.textContent = el.getAttribute("data-" + lang);
-    }
-  });
-
-  // Productos reutilizables
-  document.querySelectorAll(".product").forEach(prod => {
-    const title = prod.getAttribute("data-" + lang + "-title");
-    const desc = prod.getAttribute("data-" + lang + "-desc");
-    prod.querySelector("h2").textContent = title;
-    prod.querySelector("p").textContent = desc;
-    const btn = prod.querySelector(".btn");
-    btn.textContent = btn.getAttribute("data-" + lang);
+    el.textContent = el.getAttribute("data-" + lang);
   });
 }
 
-// Animar productos y testimonios al cargar
 window.addEventListener('load', () => {
-  const elements = document.querySelectorAll('.product, .testimonial, .form-box');
-  elements.forEach((el,i) => { el.style.animationDelay = (i*0.2) + 's'; });
+  document.querySelectorAll('.product, .testimonial').forEach((el, i) => {
+    el.style.animationDelay = (i * 0.2) + "s";
+  });
 });
 </script>
 
