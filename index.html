@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SleepM Products — Wellness & Bioenergy</title>
+<title>SleepM Products — Bienestar & Bioenergía</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --primary: #ff416c;
-  --secondary: #ff4b2b;
-  --accent: #36d1dc;
-  --highlight: #ffd60a;
-  --dark: #111827;
-  --light: #f0f8ff;
-  --radius: 16px;
+  --primary:#ff416c;
+  --secondary:#ff4b2b;
+  --accent:#36d1dc;
+  --highlight:#ffd60a;
+  --dark:#111827;
+  --light:#f0f8ff;
+  --radius:16px;
 }
 
 body {
@@ -26,25 +26,39 @@ body {
   overflow-x:hidden;
 }
 
-h1,h2,h3 { font-family:'Poppins', sans-serif; }
-h1 { font-family:'Great Vibes', cursive; font-size:3em; text-align:center; animation:fadeInDown 1.5s ease-in-out; }
-h2 { color:var(--primary); font-size:1.8em; text-align:center; font-weight:700; margin-bottom:10px; }
-h3 { color:var(--secondary); text-align:center; font-size:1.5em; font-weight:700; }
+h1,h2,h3,h4 { font-family:'Playfair Display', serif; }
+h1 {
+  font-size:3.2em;
+  text-align:center;
+  margin-bottom:10px;
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  -webkit-background-clip:text;
+  color:transparent;
+  animation:fadeInDown 1.5s ease-in-out;
+}
+h2 { font-size:2em; text-align:center; margin:15px 0; color:var(--primary); animation:fadeInUp 1s;}
+h3 { font-size:1.5em; color:var(--secondary); margin:10px 0;}
+p { font-size:1em; line-height:1.6; }
 
 @keyframes fadeInDown { from {opacity:0; transform:translateY(-30px);} to {opacity:1; transform:translateY(0);} }
 @keyframes fadeInUp { from {opacity:0; transform:translateY(30px);} to {opacity:1; transform:translateY(0);} }
-@keyframes pulse { 0% {transform: scale(1);} 50% {transform: scale(1.05);} 100% {transform: scale(1);} }
-@keyframes float { 0% {transform: translateY(0px);} 50% {transform: translateY(-10px);} 100% {transform: translateY(0px);} }
+@keyframes pulse { 0%{transform:scale(1);}50%{transform:scale(1.05);}100%{transform:scale(1);} }
+@keyframes float{0%{transform:translateY(0);}50%{transform:translateY(-10px);}100%{transform:translateY(0);} }
+@keyframes gradientBG {0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
 
 header {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
   color:white;
-  padding:100px 20px;
+  padding:120px 20px;
   text-align:center;
-  position:relative;
   overflow:hidden;
 }
-header p { font-size:1.2em; margin-top:15px; opacity:0.9; animation:fadeInUp 2s ease-in-out; }
+header p {
+  font-size:1.3em;
+  margin-top:15px;
+  opacity:0.9;
+  animation:fadeInUp 2s ease-in-out;
+}
 
 .video-section {
   max-width:1000px;
@@ -54,7 +68,11 @@ header p { font-size:1.2em; margin-top:15px; opacity:0.9; animation:fadeInUp 2s 
   box-shadow:0 8px 25px rgba(0,0,0,0.2);
   animation:fadeInUp 1.4s ease;
 }
-.video-section iframe { width:100%; height:260px; border:none; }
+.video-section iframe{
+  width:100%;
+  height:260px;
+  border:none;
+}
 
 .products {
   max-width:1000px;
@@ -64,7 +82,6 @@ header p { font-size:1.2em; margin-top:15px; opacity:0.9; animation:fadeInUp 2s 
   flex-direction:column;
   gap:40px;
 }
-
 .product {
   background:white;
   padding:25px;
@@ -73,11 +90,11 @@ header p { font-size:1.2em; margin-top:15px; opacity:0.9; animation:fadeInUp 2s 
   display:flex;
   flex-direction:column;
   align-items:center;
-  animation: fadeInUp 1s ease;
+  animation:fadeInUp 1s;
   transition:0.3s;
 }
-.product:hover { transform: scale(1.05); box-shadow:0 12px 30px rgba(0,0,0,0.2); }
-.product img { width:90%; max-width:380px; border-radius:var(--radius); margin-bottom:15px; animation:float 4s ease-in-out infinite; }
+.product:hover {transform:scale(1.05); box-shadow:0 12px 30px rgba(0,0,0,0.2);}
+.product img { width:90%; max-width:380px; border-radius:var(--radius); margin-bottom:15px; animation:float 4s ease-in-out infinite;}
 
 .details {
   max-width:900px;
@@ -86,12 +103,12 @@ header p { font-size:1.2em; margin-top:15px; opacity:0.9; animation:fadeInUp 2s 
   padding:25px;
   border-radius:var(--radius);
   box-shadow:0 8px 25px rgba(0,0,0,0.15);
-  animation: fadeInUp 1s ease;
+  animation:fadeInUp 1s;
 }
-.details h3 { margin-bottom:15px; }
+.details h3{margin-bottom:15px;}
 .details p, .details ul, .details li { font-size:1em; line-height:1.6; margin-bottom:10px; }
-.details ul { padding-left:20px; }
-.details li { margin-bottom:6px; }
+.details ul{padding-left:20px;}
+.details li{margin-bottom:6px;}
 
 .pricing-section {
   max-width:95%;
@@ -102,13 +119,13 @@ header p { font-size:1.2em; margin-top:15px; opacity:0.9; animation:fadeInUp 2s 
   color:white;
   text-align:center;
   box-shadow:0 10px 25px rgba(0,0,0,0.2);
-  animation:fadeInUp 1.2s ease;
+  animation:fadeInUp 1.2s;
 }
-.pricing-section h2 { font-size:2em; margin-bottom:15px; font-weight:700; }
-.price-box { margin-top:15px; }
-.price-box .old { text-decoration:line-through; font-size:1.2em; opacity:0.8; }
-.price-box .new { font-size:2em; font-weight:700; color:var(--highlight); }
-.cta {
+.pricing-section h2{font-size:2em; margin-bottom:15px; font-weight:700;}
+.price-box {margin-top:15px;}
+.price-box .old {text-decoration:line-through; font-size:1.2em; opacity:0.8;}
+.price-box .new {font-size:2em; font-weight:700; color:var(--highlight);}
+.cta{
   display:inline-block;
   margin-top:20px;
   background:var(--highlight);
@@ -121,22 +138,56 @@ header p { font-size:1.2em; margin-top:15px; opacity:0.9; animation:fadeInUp 2s 
   transition:0.3s;
   animation:pulse 2s infinite;
 }
-.cta:hover { background:var(--primary); color:white; }
+.cta:hover{background:var(--primary); color:white;}
 
-.video-testimonials { max-width:1000px; margin:40px auto; display:flex; flex-direction:column; gap:25px; padding:0 10px; }
-.testimonials { max-width:95%; margin:20px auto; padding:15px; display:flex; flex-direction:column; gap:15px; }
-.testimonial iframe { width:100%; height:220px; border:none; border-radius:16px; }
+.video-testimonials {
+  max-width:1000px;
+  margin:40px auto;
+  padding:20px;
+  border-radius:var(--radius);
+  background:linear-gradient(-45deg,var(--primary),var(--secondary),var(--accent),var(--highlight));
+  background-size:400% 400%;
+  animation:gradientBG 15s ease infinite;
+}
+.video-testimonials h2 {
+  text-align:center; color:white; margin-bottom:20px; text-shadow:2px 2px 8px rgba(0,0,0,0.4);
+}
+.testimonials {
+  max-width:95%;
+  margin:20px auto;
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+.testimonial {
+  position:relative;
+  overflow:hidden;
+  border-radius:var(--radius);
+  box-shadow:0 8px 25px rgba(0,0,0,0.25);
+  transition:transform 0.3s;
+}
+.testimonial:hover {transform:scale(1.03);}
+.testimonial iframe {width:100%; height:220px; border:none; border-radius:var(--radius);}
 
-footer { text-align:center; background: linear-gradient(135deg,var(--primary),var(--secondary)); color:white; padding:40px 25px; margin-top:40px; font-size:0.95em; border-top-left-radius:20px; border-top-right-radius:20px; }
+footer {
+  text-align:center;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:white;
+  padding:40px 25px;
+  margin-top:40px;
+  font-size:0.95em;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
+}
 
-@media (max-width: 600px) {
-  header h1 { font-size:2em; }
-  header p { font-size:1em; }
-  .product h2 { font-size:1.5em; }
-  .product p { font-size:0.95em; }
-  .cta { width:90%; font-size:1em; padding:12px; }
-  .details h3 { font-size:1.3em; }
-  .testimonial iframe { height:180px; }
+@media(max-width:600px){
+header h1{font-size:2em;}
+header p{font-size:1em;}
+.product h2{font-size:1.5em;}
+.product p{font-size:0.95em;}
+.cta{width:90%; font-size:1em; padding:12px;}
+.details h3{font-size:1.3em;}
+.testimonial iframe{height:180px;}
 }
 </style>
 </head>
@@ -147,15 +198,13 @@ footer { text-align:center; background: linear-gradient(135deg,var(--primary),va
   <p>Te ayuda a dormir mejor, reduce el estrés y te alivia los dolores</p>
 </header>
 
-<!-- Video de presentación -->
 <div class="video-section">
   <iframe src="https://www.youtube.com/embed/kk7nsjGcp-k?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe>
 </div>
 
 <div class="products">
-  <!-- Colchoneta -->
   <div class="product">
-    <img src="https://i.postimg.cc/q68zVRqB/IMG-2918.jpg" alt="Colchoneta Energética SleepM">
+    <img src="https://i.postimg.cc/G9sDx3Lh/IMG-2920.png" alt="Colchoneta Energética SleepM">
     <h2>Colchoneta Energética SleepM</h2>
     <p>Descanso profundo, balance energético y rejuvenecimiento celular.</p>
   </div>
@@ -163,16 +212,15 @@ footer { text-align:center; background: linear-gradient(135deg,var(--primary),va
   <div class="details">
     <h3>Los mejores materiales</h3>
     <ul>
-      <li><strong>Espuma con memoria de gel frío:</strong> Diseñada por la NASA. Suaviza impactos y absorbe energía para un descanso reparador.</li>
+      <li><strong>Espuma con memoria de gel frío:</strong> Diseñada por la NASA, absorbe impactos y maximiza el descanso.</li>
       <li><strong>Carbón activado:</strong> Mejora desintoxicación, bloquea EMF y ayuda a la circulación.</li>
       <li><strong>Energía biocristalina:</strong> 18 cristales equilibran flujo energético y bienestar general.</li>
       <li><strong>Tecnología de microbobinas:</strong> Circulación de aire, alivio de presión y comodidad duradera.</li>
     </ul>
   </div>
 
-  <!-- Almohadilla térmica -->
   <div class="product">
-    <img src="https://i.postimg.cc/3y2TB7fC/almohadilla.png" alt="Almohadilla Térmica SleepM">
+    <img src="https://i.postimg.cc/q68zVRqB/IMG-2918.jpg" alt="Almohadilla Térmica SleepM">
     <h2>Almohadilla Térmica SleepM</h2>
     <p>Relaja músculos, reduce dolor y mejora tu energía mientras duermes.</p>
   </div>
@@ -187,54 +235,35 @@ footer { text-align:center; background: linear-gradient(135deg,var(--primary),va
   </div>
 </div>
 
-<!-- Sección de precios y beneficios -->
 <div class="pricing-section">
   <h2>Agenda tu Sesión de Terapia SleepM</h2>
   <div class="price-box">
     <div class="old">$300 USD</div>
-    <div class="new" id="countdown-price">$50 USD</div>
+    <div class="new">$50 USD</div>
     <p><strong>Promoción Black Friday — 45 minutos</strong></p>
-    <p style="margin-top:15px; font-size:1.1em; animation:fadeInUp 1s;">🎁 <strong>Al aprovechar esta oferta:</strong></p>
-    <ul style="list-style:circle; margin-left:20px; font-size:1em; line-height:1.6; animation:fadeInUp 1.2s;">
-      <li>Obtienes la opción de <strong>clonar el sistema</strong> y usarlo para tu propio negocio.</li>
+    <ul style="list-style:circle; margin-left:20px;">
+      <li>Opción de <strong>clonar el sistema</strong> para tu negocio.</li>
       <li>Ganas <strong>$50 USD</strong> por cada nuevo miembro que tome la terapia a través de tu referencia.</li>
-      <li>Disfrutas de la sesión con <strong>productos SleepM de alta calidad</strong> (colchoneta y almohadilla térmica).</li>
+      <li>Disfrutas de la sesión con productos SleepM de alta calidad (colchoneta y almohadilla térmica).</li>
     </ul>
   </div>
   <a class="cta" href="https://calendly.com/10xsleepm/terapia-de-bienestar" target="_blank">Agendar mi Sesión</a>
   <a class="cta" href="https://www.paypal.com/invoice/p/#58N7Q6NGLEPJCQ5L" target="_blank" style="margin-top:15px;">Pagar mi Sesión</a>
 </div>
 
-<!-- Sección de testimonios (6 videos) -->
 <div class="video-testimonials">
-  <h2 style="text-align:center; color:var(--primary);">Testimonios de Clientes</h2>
+  <h2>Testimonios de Clientes</h2>
   <div class="testimonials">
-    <iframe src="https://www.youtube.com/embed/kHJeR61n_7k?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/1Igm2xKPIEg?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/v0n64DIlDjM?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/9pw1nfvnweo?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/UYYFVS3MXZc?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/1Vck6ltkwf8?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe>
+    <div class="testimonial"><iframe src="https://www.youtube.com/embed/kHJeR61n_7k?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe></div>
+    <div class="testimonial"><iframe src="https://www.youtube.com/embed/1Igm2xKPIEg?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe></div>
+    <div class="testimonial"><iframe src="https://www.youtube.com/embed/v0n64DIlDjM?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe></div>
+    <div class="testimonial"><iframe src="https://www.youtube.com/embed/9pw1nfvnweo?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe></div>
+    <div class="testimonial"><iframe src="https://www.youtube.com/embed/UYYFVS3MXZc?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe></div>
+    <div class="testimonial"><iframe src="https://www.youtube.com/embed/1Vck6ltkwf8?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe></div>
   </div>
 </div>
 
 <footer>© 2025 SleepM Products — Wellness & Bioenergy</footer>
-
-<script>
-// Countdown promocional
-let countdown = new Date().getTime() + (1000*60*60*24);
-let timerEl = document.getElementById("countdown-timer");
-let priceEl = document.getElementById("countdown-price");
-let x = setInterval(function() {
-  let now = new Date().getTime();
-  let distance = countdown - now;
-  let hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-  let minutes = Math.floor((distance%(1000*60*60))/(1000*60));
-  let seconds = Math.floor((distance%(1000*60))/1000);
-  if(distance<0){ clearInterval(x); if(timerEl) timerEl.innerHTML="¡Promoción Finalizada!"; priceEl.innerHTML="$300 USD"; }
-  else{ if(timerEl) timerEl.innerHTML="Oferta termina en: "+hours+"h "+minutes+"m "+seconds+"s"; }
-},1000);
-</script>
 
 </body>
 </html>
