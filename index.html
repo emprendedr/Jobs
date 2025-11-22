@@ -1,246 +1,179 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JobsProducts</title>
+<!-- =======================
+  Landing optimizada para HubSpot
+  - Pegar en un módulo "Custom HTML" de HubSpot Landing Page
+  - Luego sustituir YOUR_PORTAL_ID / YOUR_FORM_ID
+======================= -->
 
 <style>
-  body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #dbeafe, #f0f9ff, #e0f2fe);
-    color: #111827;
-    overflow-x: hidden;
-  }
-
-  /* Header */
-  header {
-    background: linear-gradient(90deg, #1e40af, #2563eb, #3b82f6);
-    color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-  }
-
-  header h1 {
-    font-size: 2.8em;
-    margin: 0;
-    font-weight: 700;
-    letter-spacing: 1px;
-  }
-
-  header p {
-    margin-top: 12px;
-    font-size: 1.2em;
-    opacity: 0.95;
-  }
-
-  /* Language selector */
-  .language-box {
-    text-align: right;
-    padding: 12px 20px;
-    background: #e0e7ff;
-    font-size: 16px;
-  }
-
-  select {
-    padding: 8px 12px;
-    border-radius: 8px;
-    font-size: 16px;
-    border: 1px solid #64748b;
-  }
-
-  /* Main */
-  main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-  }
-
-  /* Video */
-  .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    border-radius: 15px;
-    margin-bottom: 30px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  }
-
-  .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  /* IMAGEN EXTRA */
-  .image-section {
-    text-align: center;
-    margin: 30px 0;
-  }
-
-  .image-section img {
-    width: 100%;
-    max-width: 900px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  }
-
-  /* Product Card */
-  .product {
-    background: #ffffffcc;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 35px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    backdrop-filter: blur(6px);
-    animation: fadeInUp 0.7s ease forwards;
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  .product h2 {
-    font-size: 1.8em;
-    font-weight: 700;
-    color: #1e3a8a;
-  }
-
-  .product img {
-    width: 100%;
-    border-radius: 15px;
-    margin-top: 15px;
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 14px 22px;
-    background: #1d4ed8;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: 600;
-    margin-top: 15px;
-    transition: 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-  }
-
-  .btn:hover {
-    background: #3b82f6;
-    transform: translateY(-3px);
-  }
-
-  /* Testimonials */
-  .testimonial {
-    background: #e2e8f0;
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    font-style: italic;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    animation: fadeInUp 0.7s ease forwards;
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 25px;
-    background: #1e293b;
-    color: white;
-    margin-top: 40px;
-  }
-
-  /* Animation */
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-</style>
-</head>
-<body>
-
-<!-- Language Selector -->
-<div class="language-box">
-  <label><strong>🌐 Language / Idioma:</strong></label>
-  <select id="language-select" onchange="changeLanguage()">
-    <option value="es">Español</option>
-    <option value="en">English</option>
-  </select>
-</div>
-
-<!-- HEADER -->
-<header>
-  <h1 data-es="Bienvenido a JobsProducts" data-en="Welcome to JobsProducts">Bienvenido a JobsProducts</h1>
-  <p data-es="Encuentra productos que realmente mejoran tu vida." data-en="Find products that truly improve your life.">Encuentra productos que realmente mejoran tu vida.</p>
-</header>
-
-<main>
-
-  <!-- Video -->
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/tu_video_aqui" frameborder="0" allowfullscreen></iframe>
-  </div>
-
-  <!-- Imagen extra superior -->
-  <div class="image-section">
-    <img src="https://via.placeholder.com/900x400?text=Tu+Imagen+Aqui" alt="Imagen superior">
-  </div>
-
-  <!-- PRODUCTO 1 -->
-  <div class="product">
-    <h2>Almohadilla Térmica con Biocristales</h2>
-    <p>Relaja músculos, mejora la circulación y alivia el dolor de forma natural.</p>
-    <a class="btn" href="https://wa.link/emv45g">Más información</a>
-  </div>
-
-  <!-- PRODUCTO 2 con IMAGEN EXTRA -->
-  <div class="product">
-    <h2>Colchoneta Energética SleepM</h2>
-    <p>Ideal para descansar profundamente y recuperar energía mientras duermes.</p>
-    <img src="https://via.placeholder.com/900x400?text=Colchoneta+SleepM" alt="Imagen colchoneta">
-    <a class="btn" href="https://wa.link/emv45g">Solicitar detalles</a>
-  </div>
-
-  <!-- PRODUCTO 3 -->
-  <div class="product">
-    <h2>Gana dinero recomendando productos</h2>
-    <p>Únete a nuestra red y construye ingresos desde tu teléfono.</p>
-    <a class="btn" href="https://wa.link/emv45g">Unirme ahora</a>
-  </div>
-
-  <!-- TESTIMONIOS -->
-  <div class="testimonial">“Aprendí desde cero y ya lancé mi primer proyecto.” – María G.</div>
-  <div class="testimonial">“La comunidad me ayudó a avanzar. No estás solo.” – Carlos R.</div>
-  <div class="testimonial">“Práctico y real. Lo recomiendo.” – Ana L.</div>
-
-</main>
-
-<footer>
-  © 2025 JobsProducts. Todos los derechos reservados.
-</footer>
-
-<script>
-function changeLanguage() {
-  const lang = document.getElementById("language-select").value;
-  document.querySelectorAll("[data-es]").forEach(el => {
-    el.textContent = el.getAttribute("data-" + lang);
-  });
+/* ===== Estilos (mantener en el mismo módulo o en CSS global) ===== */
+:root{
+  --accent1: #00c8ff;
+  --accent2: #7a00ff;
+  --bg: #f7f9fb;
+  --text: #111;
 }
 
-window.addEventListener('load', () => {
-  document.querySelectorAll('.product, .testimonial').forEach((el, i) => {
-    el.style.animationDelay = (i * 0.2) + "s";
+body{ font-family:'Poppins',system-ui,Arial; color:var(--text); background:var(--bg); margin:0;}
+.container{ max-width:1100px; margin:40px auto; padding:30px; }
+.header{ text-align:center; padding:40px; background:linear-gradient(90deg,var(--accent1),var(--accent2)); color:#fff; border-radius:12px; box-shadow:0 10px 35px rgba(0,0,0,0.12);}
+.header h1{ margin:0; font-size:2.2rem; font-weight:800; }
+.header p{ margin-top:8px; opacity:0.95; }
+
+.grid{ display:grid; grid-template-columns: 1fr 420px; gap:28px; margin-top:28px; align-items:start;}
+@media(max-width:980px){ .grid{ grid-template-columns:1fr; } }
+
+.card{ background:#fff; border-radius:14px; padding:24px; box-shadow:0 8px 30px rgba(16,24,40,0.06); }
+
+.video-frame{ border-radius:12px; overflow:hidden; box-shadow:0 8px 30px rgba(0,0,0,0.12); }
+.product-gallery{ display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:18px; }
+.product-gallery img{ width:150px; height:150px; object-fit:cover; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.08); transition:transform .25s; }
+.product-gallery img:hover{ transform:translateY(-6px) scale(1.03); }
+
+.price-block{ text-align:center; padding:20px; border-radius:12px; background:linear-gradient(180deg,#fff,#fbfbff); }
+.price-big{ font-size:44px; font-weight:900; background:linear-gradient(90deg,var(--accent1),var(--accent2)); -webkit-background-clip:text; color:transparent; animation:pricePulse 1.5s infinite; }
+@keyframes pricePulse{ 0%{transform:scale(1)}50%{transform:scale(1.03)}100%{transform:scale(1)} }
+
+.cta-primary{ display:inline-block; padding:14px 28px; font-weight:700; border-radius:40px; color:#fff; background:linear-gradient(90deg,var(--accent2),var(--accent1)); text-decoration:none; box-shadow:0 10px 30px rgba(122,0,255,0.18); transition:transform .2s;}
+.cta-primary:hover{ transform:scale(1.03); }
+
+.info-list{ text-align:left; margin-top:12px; }
+.info-list li{ margin:8px 0; }
+
+/* Form container (HubSpot form target) */
+.form-container{ padding:18px; border-radius:12px; background:linear-gradient(180deg,#ffffff, #fbfbff); box-shadow:0 10px 30px rgba(0,0,0,0.06); }
+.form-title{ font-weight:800; font-size:20px; margin-bottom:8px; text-align:center; }
+
+/* Footer */
+.page-footer{ text-align:center; padding:28px; margin-top:28px; color:#666; font-size:14px; }
+</style>
+
+<div class="container">
+  <div class="header">
+    <h1>SleepMProducts — Terapia Bioenergética</h1>
+    <p>Regenera tu energía y mejora tu sueño con sesiones de 45 minutos usando Almohadilla + Colchoneta SleepM</p>
+  </div>
+
+  <div class="grid" role="main">
+    <!-- LEFT: contenido informativo -->
+    <div>
+      <div class="card">
+        <h2 style="margin:0 0 8px 0;">Presentación en Video</h2>
+        <div class="video-frame">
+          <!-- Pega aquí la URL de tu video -> mejor si es el iframe de YouTube o la URL del File Manager -->
+          <iframe width="100%" height="360" src="YOUR_VIDEO_URL" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:18px;">
+        <h3 style="margin:0 0 12px 0;">Beneficios principales</h3>
+        <ul class="info-list">
+          <li>✅ Mejora del sueño y recuperación</li>
+          <li>✅ Alivio muscular y circulatorio</li>
+          <li>✅ Aumento de energía al despertar</li>
+          <li>✅ Terapia guiada de 45 minutos + dispositivos SleepM</li>
+        </ul>
+
+        <div style="margin-top:14px; text-align:center;">
+          <a class="cta-primary" href="#form-anchor">Quiero mi Sesión</a>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:18px;">
+        <h3 style="margin:0 0 12px 0;">Galería</h3>
+        <div class="product-gallery">
+          <!-- Pega aquí URLs desde HubSpot File Manager -->
+          <img src="IMG_URL_ALMOHADILLA" alt="Almohadilla SleepM">
+          <img src="IMG_URL_COLCHONETA" alt="Colchoneta SleepM">
+          <img src="IMG_URL_MASCARA" alt="Antifaz / Topper SleepM">
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: formulario + pricing -->
+    <aside>
+      <div class="card form-container" id="form-anchor">
+        <div class="form-title">Reserva tu sesión — Cupos limitados</div>
+        <!-- HubSpot form TARGET -->
+        <div id="hubspotForm"></div>
+
+        <!-- Botones alternos -->
+        <div style="text-align:center; margin-top:12px;">
+          <a class="cta-primary" href="https://calendly.com/10xsleepm/terapia-de-bienestar" target="_blank">Agendar por Calendly</a>
+          <div style="margin-top:10px;">
+            <a href="https://wa.me/13232850508" class="cta-primary" style="background:#25D366;">Enviar WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card price-block" style="margin-top:18px;">
+        <div style="text-align:center;">
+          <div class="price-title">Sesión (45 minutos)</div>
+          <div class="price-big" style="font-size:28px; margin-top:6px; color:#666;">Precio regular: <del>$300</del></div>
+          <div style="margin-top:12px;">
+            <div class="dynamic-price" id="dynamicPrice">$300</div>
+            <div style="font-size:14px; margin-top:6px;">Promoción Black Friday — baja progresiva hasta $50</div>
+          </div>
+          <div style="margin-top:14px;">
+            <a class="cta-primary" href="https://calendly.com/10xsleepm/terapia-de-bienestar" target="_blank">Agendar Mi Sesión Ahora</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="card" style="margin-top:22px;">
+    <h3 style="margin:0 0 10px 0;">Preguntas frecuentes</h3>
+    <ul class="info-list">
+      <li><strong>¿Qué incluye la sesión?</strong> Uso de almohadilla + colchoneta, guía durante 45 min y recomendaciones post-sesión.</li>
+      <li><strong>¿Dónde se realiza?</strong> Sesiones presenciales (o híbridas según disponibilidad).</li>
+      <li><strong>¿Hay garantía?</strong> Reembolsos parciales dentro de las 24 hrs (ver políticas).</li>
+    </ul>
+  </div>
+
+  <div class="page-footer">
+    © 2025 SleepMProducts — Todos los derechos reservados • Contacto: +1 (323) 285-0508
+  </div>
+</div>
+
+<!-- ========== SCRIPT: Cargar formulario HubSpot (sustituye portalId y formId) ========== -->
+<script src="//js.hsforms.net/forms/v2.js"></script>
+<script>
+/*
+  1) Reemplaza YOUR_PORTAL_ID y YOUR_FORM_ID.
+  2) El formulario debe crearse en HubSpot (Marketing > Forms) y copiar Form ID.
+*/
+(function loadHubspotForm(){
+  const portalId = "YOUR_PORTAL_ID";
+  const formId = "YOUR_FORM_ID";
+  if(!portalId || !formId) {
+    // muestra ejemplo de form de fallback si no configuras HubSpot
+    document.getElementById('hubspotForm').innerHTML = '<form onsubmit="return false;"><input placeholder=\"Nombre\" style=\"width:100%;padding:10px;margin:6px 0;border-radius:6px;border:1px solid #ccc\"><input placeholder=\"Email\" style=\"width:100%;padding:10px;margin:6px 0;border-radius:6px;border:1px solid #ccc\"><a class=\"cta-primary\" href=\"#\" onclick=\"location.href=\\'https://calendly.com/10xsleepm/terapia-de-bienestar\\'\">Agendar por Calendly</a></form>';
+    return;
+  }
+
+  hbspt.forms.create({
+    region: "na1", // o "eu1" según tu cuenta (usa na1 si no sabes)
+    portalId: portalId,
+    formId: formId,
+    target: "#hubspotForm",
+    onFormSubmit: function($form) {
+      // Redirige a página de agradecimiento en HubSpot o externa
+      window.location.href = "URL_DE_TU_PAGINA_DE_AGRADECIMIENTO";
+    }
   });
-});
+})();
 </script>
 
-</body>
-</html>
+<!-- ========== SCRIPT: Dinámica de precio (300->50) ========== -->
+<script>
+(function priceDrop(){
+  let price = 300;
+  const el = document.getElementById('dynamicPrice');
+  el.textContent = "$" + price;
+  const interval = setInterval(()=>{
+    if(price <= 50){ clearInterval(interval); return; }
+    price -= 5; // decremento; cámbialo si quieres otro ritmo
+    el.textContent = "$" + price;
+  }, 1500);
+})();
+</script>
