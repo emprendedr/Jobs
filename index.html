@@ -41,8 +41,8 @@ header h1 { font-size: 2.2em; margin:0; font-weight:700; }
 header p { font-size: 1em; opacity:0.9; }
 
 /* VIDEO */
-.video-section { max-width:100%; margin:30px auto; border-radius:var(--radius); overflow:hidden; animation:fadeUp 1.4s ease-in-out; }
-.video-section iframe { width:100%; height:220px; border:none; }
+.video-section { max-width:100%; margin:30px auto; border-radius:var(--radius); animation:fadeUp 1.4s ease-in-out; }
+.video-section iframe { width:100%; height:220px; border:none; border-radius:14px; }
 
 /* PRODUCTOS */
 .products { max-width:1000px; margin:40px auto; padding:0 10px; display:flex; flex-direction:column; gap:25px; }
@@ -73,6 +73,9 @@ header p { font-size: 1em; opacity:0.9; }
 /* TESTIMONIOS */
 .testimonials { max-width:95%; margin:40px auto; padding:15px; display:flex; flex-direction:column; gap:15px;}
 .testimonial { background:#eef3f8; padding:15px; border-radius:var(--radius); animation:fadeUp 0.8s ease; font-style:italic; font-size:0.95em; text-align:center; }
+
+/* VIDEOS TESTIMONIOS */
+.video-testimonials { max-width:1000px; margin:40px auto; display:flex; flex-direction:column; gap:25px; padding:0 10px; }
 
 /* FOOTER */
 footer { text-align:center; background:var(--dark); color:white; padding:25px; margin-top:40px; font-size:0.9em; }
@@ -114,29 +117,25 @@ footer { text-align:center; background:var(--dark); color:white; padding:25px; m
   <p>Descanso profundo • Alivio natural • Energía renovada</p>
 </header>
 
-<!-- Video protegido -->
+<!-- Video de presentación -->
 <div class="video-section">
-  <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:14px;">
-    <iframe 
-      src="https://www.youtube.com/embed/kk7nsjGcp-k?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1&autoplay=0&mute=0" 
-      style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-      frameborder="0" 
-      allowfullscreen>
-    </iframe>
-    <div style="position:absolute;top:0;left:0;width:100%;height:100%;"></div>
-  </div>
+  <iframe 
+    src="https://www.youtube.com/embed/kk7nsjGcp-k?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" 
+    style="width:100%;height:220px;border:none;border-radius:14px;" 
+    allowfullscreen>
+  </iframe>
 </div>
 
 <!-- Productos -->
 <div class="products">
   <div class="product">
-    <img src="https://i.postimg.cc/hc1cbb50/colchoneta.png" alt="Colchoneta Energética SleepM" />
+    <img src="https://i.ibb.co/hc1cbb50/colchoneta.png" alt="Colchoneta Energética SleepM" />
     <h2>Colchoneta Energética SleepM</h2>
     <p>Descanso profundo, balance energético y rejuvenecimiento celular.</p>
   </div>
 
   <div class="product">
-    <img src="https://i.postimg.cc/h67954e2/almohadilla.png" alt="Almohadilla Térmica SleepM" />
+    <img src="https://i.ibb.co/h67954e2/almohadilla.png" alt="Almohadilla Térmica SleepM" />
     <h2>Almohadilla Térmica SleepM</h2>
     <p>Relaja músculos, reduce dolor y recupera energía con biocristales.</p>
   </div>
@@ -163,6 +162,28 @@ footer { text-align:center; background:var(--dark); color:white; padding:25px; m
   <a class="cta" href="https://calendly.com/10xsleepm/terapia-de-bienestar">Agendar mi Sesión</a>
 </div>
 
+<!-- Videos de testimonios -->
+<div class="video-testimonials">
+  <div class="video-section">
+    <iframe src="https://www.youtube.com/embed/kHJeR61n_7k?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" style="width:100%;height:220px;border:none;border-radius:14px;" allowfullscreen></iframe>
+  </div>
+  <div class="video-section">
+    <iframe src="https://www.youtube.com/embed/1Igm2xKPIEg?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" style="width:100%;height:220px;border:none;border-radius:14px;" allowfullscreen></iframe>
+  </div>
+  <div class="video-section">
+    <iframe src="https://www.youtube.com/embed/v0n64DIlDjM?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" style="width:100%;height:220px;border:none;border-radius:14px;" allowfullscreen></iframe>
+  </div>
+  <div class="video-section">
+    <iframe src="https://www.youtube.com/embed/9pw1nfvnweo?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" style="width:100%;height:220px;border:none;border-radius:14px;" allowfullscreen></iframe>
+  </div>
+  <div class="video-section">
+    <iframe src="https://www.youtube.com/embed/UYYFVS3MXZc?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" style="width:100%;height:220px;border:none;border-radius:14px;" allowfullscreen></iframe>
+  </div>
+  <div class="video-section">
+    <iframe src="https://www.youtube.com/embed/1Vck6ltkwf8?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" style="width:100%;height:220px;border:none;border-radius:14px;" allowfullscreen></iframe>
+  </div>
+</div>
+
 <div class="testimonials">
   <div class="testimonial">"La mejor terapia que he probado. Sentí alivio desde la primera sesión."</div>
   <div class="testimonial">"El calor y la energía realmente se sienten. Muy recomendable."</div>
@@ -186,7 +207,6 @@ footer { text-align:center; background:var(--dark); color:white; padding:25px; m
 window.onload = function() {
   setTimeout(()=> { document.getElementById('popup').style.display='block'; }, 1500);
 };
-function closePopup() { document.getElementById('popup').style.display='none'; }
 
 /* CUENTA REGRESIVA */
 let countdown = new Date().getTime() + (1000*60*60*24);
@@ -201,6 +221,8 @@ let x = setInterval(function() {
   if(distance < 0){ clearInterval(x); timerEl.innerHTML="¡Promoción Finalizada!"; priceEl.innerHTML="$300 USD"; }
   else { timerEl.innerHTML = "Oferta termina en: " + hours + "h " + minutes + "m " + seconds + "s"; }
 },1000);
+
+function closePopup() { document.getElementById('popup').style.display='none'; }
 </script>
 
 </body>
