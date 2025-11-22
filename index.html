@@ -1,119 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SleepM Products — Wellness & Bioenergy Therapy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SleepM Products — Wellness & Bioenergy Therapy</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-<style>
-:root {
-    --primary: #003566;
-    --secondary: #00a6fb;
-    --dark: #0a0a0a;
-    --light: #f5f7fa;
-    --accent: #ffd60a;
-    --radius: 14px;
-}
+  <style>
+    :root {
+      --primary: #003566;
+      --secondary: #00a6fb;
+      --dark: #0a0a0a;
+      --light: #f5f7fa;
+      --accent: #ffd60a;
+      --radius: 14px;
+    }
 
-/* Tipografía animada */
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background: var(--light);
-    color: var(--dark);
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
 
-/* Animaciones */
-@keyframes fadeUp { from {opacity:0; transform:translateY(25px);} to {opacity:1; transform:translateY(0);} }
-@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-@keyframes zoomIn { from {transform: scale(0.95);} to {transform: scale(1);} }
-@keyframes parallax { 0% {transform: translateY(0);} 50% {transform: translateY(-10px);} 100% {transform: translateY(0);} }
+    @keyframes fadeUp { from {opacity:0; transform:translateY(25px);} to {opacity:1; transform:translateY(0);} }
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    @keyframes zoomIn { from {transform: scale(0.95);} to {transform: scale(1);} }
+    @keyframes parallax { 0% {transform: translateY(0);} 50% {transform: translateY(-10px);} 100% {transform: translateY(0);} }
 
-/* HEADER */
-header {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: white;
-    padding: 80px 15px 50px;
-    text-align: center;
-    animation:fadeIn 1.2s ease-in-out;
-}
-header h1 { font-size:2.2em; margin:0; font-weight:700; animation:fadeUp 1s ease; }
-header p { font-size:1.1em; opacity:0.9; margin-top:10px; animation:fadeUp 1.3s ease; }
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 80px 15px;
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    header h1 { font-size: 2.2em; margin:0; font-weight:700; }
+    header p { font-size: 1em; opacity:0.9; margin-top: 10px; }
 
-/* VIDEO */
-.video-section { max-width:100%; margin:30px auto; border-radius:var(--radius); animation:fadeUp 1.4s ease-in-out; }
-.video-section iframe { width:100%; height:220px; border:none; border-radius:14px; }
+    .video-section { max-width:100%; margin:30px auto; border-radius:var(--radius); animation:fadeUp 1.4s ease-in-out; }
+    .video-section iframe { width:100%; height:220px; border:none; border-radius:14px; }
 
-/* PRODUCTOS */
-.products { max-width:1000px; margin:40px auto; padding:0 10px; display:flex; flex-direction:column; gap:40px; }
-.product {
-    background:white; padding:25px; border-radius:var(--radius);
-    box-shadow:0 6px 20px rgba(0,0,0,0.1); display:flex; flex-direction:column; align-items:center;
-    animation:fadeUp 1s ease; transition:0.3s; cursor:pointer;
-}
-.product:hover { transform: scale(1.02); box-shadow:0 10px 25px rgba(0,0,0,0.15);}
-.product img { width:90%; max-width:350px; border-radius:var(--radius); animation:parallax 4s ease-in-out infinite;}
-.product h2 { margin:20px 0 15px; color:var(--primary); font-size:1.6em; text-align:center; font-weight:700; animation:fadeUp 1s ease;}
-.product p { font-size:1em; opacity:0.85; text-align:center; line-height:1.5; animation:fadeUp 1.2s ease; }
+    .products { max-width:1000px; margin:40px auto; padding:0 10px; display:flex; flex-direction:column; gap:40px; }
+    .product {
+      background:white; padding:25px; border-radius:var(--radius);
+      box-shadow:0 6px 20px rgba(0,0,0,0.1); display:flex; flex-direction:column; align-items:center;
+      animation: fadeUp 1s ease; transition:0.3s; cursor:pointer;
+    }
+    .product:hover { transform: scale(1.02); box-shadow:0 10px 25px rgba(0,0,0,0.15); }
+    .product img { width:90%; max-width:350px; border-radius:var(--radius); animation:parallax 4s ease-in-out infinite; }
+    .product h2 { margin:20px 0 15px; color:var(--primary); font-size:1.6em; text-align:center; font-weight:700; }
+    .product p { font-size:1em; opacity:0.85; text-align:center; line-height:1.5; }
 
-/* DESCRIPCIÓN DETALLADA */
-.details { max-width:900px; margin:30px auto; background:white; padding:25px; border-radius:var(--radius); box-shadow:0 6px 20px rgba(0,0,0,0.1); animation:zoomIn 1s ease; }
-.details h3 { color:var(--primary); margin-bottom:10px; text-align:center; font-size:1.5em; font-weight:700; }
-.details p, .details ul, .details li { font-size:0.95em; line-height:1.6; margin-bottom:10px; }
-.details ul { padding-left:20px; }
-.details li { margin-bottom:6px; }
+    .details { max-width:900px; margin:30px auto; background:white; padding:25px; border-radius:var(--radius); box-shadow:0 6px 20px rgba(0,0,0,0.1); animation: zoomIn 1s ease; }
+    .details h3 { color: var(--primary); margin-bottom:10px; text-align:center; font-size:1.5em; font-weight:700; }
+    .details p, .details ul, .details li { font-size:0.95em; line-height:1.6; margin-bottom:10px; }
+    .details ul { padding-left:20px; }
+    .details li { margin-bottom:6px; }
 
-/* PRECIOS Y CTA */
-.pricing-section { max-width:95%; margin:40px auto; padding:25px; background:white; border-radius:var(--radius); box-shadow:0 8px 25px rgba(0,0,0,0.15); animation:fadeUp 1.3s ease; }
-.pricing-section h2 { text-align:center; margin-bottom:15px; color:var(--primary); font-size:1.8em; font-weight:700; }
-.price-box { text-align:center; margin-top:15px; }
-.price-box .old { text-decoration:line-through; font-size:1.2em; opacity:0.6; }
-.price-box .new { font-size:2em; font-weight:700; color:var(--accent); }
-.cta { display:block; margin:20px auto; width:80%; max-width:250px; text-align:center; background:var(--primary); color:white; padding:12px 20px; border-radius:var(--radius); font-size:1em; font-weight:600; text-decoration:none; transition:0.3s; }
-.cta:hover { background:var(--secondary); }
+    .how-it-works { max-width:95%; margin:40px auto; padding:20px; background:white; border-radius:var(--radius); box-shadow:0 6px 20px rgba(0,0,0,0.1); animation:zoomIn 1s ease; }
+    .how-it-works h2 { text-align:center; margin-bottom:15px; color:var(--primary); }
+    .how-it-works ol { padding-left:15px; font-size:1em; line-height:1.5; }
 
-/* VIDEOS TESTIMONIOS */
-.video-testimonials { max-width:1000px; margin:40px auto; display:flex; flex-direction:column; gap:25px; padding:0 10px; }
+    .pricing-section { max-width:95%; margin:40px auto; padding:25px; background:white; border-radius:var(--radius); box-shadow:0 8px 25px rgba(0,0,0,0.15); animation:fadeUp 1.3s ease; }
+    .pricing-section h2 { text-align:center; margin-bottom:15px; color:var(--primary); font-size:1.8em; font-weight:700; }
+    .price-box { text-align:center; margin-top:15px; }
+    .price-box .old { text-decoration: line-through; font-size:1.2em; opacity:0.6; }
+    .price-box .new { font-size:2em; font-weight:700; color:var(--accent); }
+    .cta { display:block; margin:20px auto; width:80%; max-width:250px; text-align:center; background:var(--primary); color:white; padding:12px 20px; border-radius:var(--radius); font-size:1em; font-weight:600; text-decoration:none; transition:0.3s; }
+    .cta:hover { background:var(--secondary); }
 
-/* TESTIMONIOS */
-.testimonials { max-width:95%; margin:40px auto; padding:15px; display:flex; flex-direction:column; gap:15px;}
-.testimonial { background:#eef3f8; padding:15px; border-radius:var(--radius); animation:fadeUp 0.8s ease; font-style:italic; font-size:0.95em; text-align:center; }
+    .video-testimonials { max-width:1000px; margin:40px auto; display:flex; flex-direction:column; gap:25px; padding:0 10px; }
 
-/* FOOTER */
-footer { text-align:center; background:var(--dark); color:white; padding:25px; margin-top:40px; font-size:0.9em; }
+    .testimonials { max-width:95%; margin:40px auto; padding:15px; display:flex; flex-direction:column; gap:15px; }
+    .testimonial { background:#eef3f8; padding:15px; border-radius:var(--radius); animation:fadeUp 0.8s ease; font-style:italic; font-size:0.95em; text-align:center; }
 
-/* BOTÓN WHATSAPP */
-.whatsapp-float {
-    position: fixed; bottom:15px; right:15px; background:#25d366;
-    color:white; padding:12px; border-radius:50%; font-size:22px; text-decoration:none;
-    box-shadow:0 4px 12px rgba(0,0,0,0.2); z-index:1000; animation:fadeUp 1s ease;
-}
+    footer { text-align:center; background:var(--dark); color:white; padding:25px; margin-top:40px; font-size:0.9em; }
 
-/* POP-UP BLACK FRIDAY */
-#popup { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:999; }
-#popup .popup-content { background:white; max-width:90%; margin:80px auto; padding:25px; border-radius:var(--radius); text-align:center; animation:zoomIn 0.5s ease; }
-#popup .popup-content h3 { margin-bottom:15px; color:var(--primary); font-size:1.5em; }
-#popup .popup-content p { font-size:1em; margin-bottom:15px; }
-#popup .popup-content button { padding:10px 20px; font-size:1em; border:none; border-radius:var(--radius); background:var(--accent); cursor:pointer; font-weight:600; transition:0.3s; }
-#popup .popup-content button:hover { background:var(--primary); color:white; }
+    .whatsapp-float {
+      position: fixed; bottom:15px; right:15px; background:#25d366;
+      color:white; padding:12px; border-radius:50%; font-size:22px; text-decoration:none;
+      box-shadow:0 4px 12px rgba(0,0,0,0.2); z-index:1000; animation:fadeUp 1s ease;
+    }
 
-/* RESPONSIVE MEDIA QUERIES */
-@media (max-width: 600px) {
-    header h1 { font-size:1.8em; }
-    header p { font-size:0.95em; }
-    .product img { width:95%; }
-    .product h2 { font-size:1.3em; }
-    .product p { font-size:0.9em; }
-    .pricing-section h2 { font-size:1.5em; }
-    .price-box .new { font-size:1.7em; }
-    .cta { width:90%; font-size:1em; padding:10px; }
-    .details h3 { font-size:1.3em; }
-}
-</style>
+    #popup { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:999; }
+    #popup .popup-content { background:white; max-width:90%; margin:80px auto; padding:25px; border-radius:var(--radius); text-align:center; animation:zoomIn 0.5s ease; }
+    #popup .popup-content h3 { margin-bottom:15px; color:var(--primary); font-size:1.5em; }
+    #popup .popup-content p { font-size:1em; margin-bottom:15px; }
+    #popup .popup-content button { padding:10px 20px; font-size:1em; border:none; border-radius:var(--radius); background:var(--accent); cursor:pointer; font-weight:600; transition:0.3s; }
+    #popup .popup-content button:hover { background:var(--primary); color:white; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size:1.8em; }
+      header p { font-size:0.95em; }
+      .product img { width:95%; }
+      .product h2 { font-size:1.3em; }
+      .product p { font-size:0.9em; }
+      .pricing-section h2 { font-size:1.5em; }
+      .price-box .new { font-size:1.7em; }
+      .cta { width:90%; font-size:1em; padding:10px; }
+      .details h3 { font-size:1.3em; }
+    }
+  </style>
 </head>
 
 <body>
@@ -123,7 +113,6 @@ footer { text-align:center; background:var(--dark); color:white; padding:25px; m
   <p>Te ayuda a dormir mejor, reduce el estrés y te alivia los dolores</p>
 </header>
 
-<!-- Video de presentación -->
 <div class="video-section">
   <iframe 
     src="https://www.youtube.com/embed/kk7nsjGcp-k?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" 
@@ -132,10 +121,9 @@ footer { text-align:center; background:var(--dark); color:white; padding:25px; m
   </iframe>
 </div>
 
-<!-- Productos -->
 <div class="products">
   <div class="product">
-    <img src="https://i.ibb.co/hc1cbb50/colchoneta.png" alt="Colchoneta Energética SleepM" />
+    <img src="https://i.ibb.co/rGpZj80b" alt="Colchoneta Energética SleepM" />
     <h2>Colchoneta Energética SleepM</h2>
     <p>Descanso profundo, balance energético y rejuvenecimiento celular.</p>
   </div>
@@ -147,13 +135,13 @@ footer { text-align:center; background:var(--dark); color:white; padding:25px; m
       <li><strong>Espuma con memoria de gel frío:</strong> Diseñada por la NASA en los años 70. Suaviza impactos y absorbe energía para un descanso reparador.</li>
       <li><strong>Carbón activado:</strong> Mejora la desintoxicación, bloquea frecuencias electromagnéticas, ayuda a la circulación y reduce el estrés.</li>
       <li><strong>Energía biocristalina:</strong> 18 cristales de distintas partes del mundo ayudan a equilibrar flujo energético y bienestar general.</li>
-      <li><strong>Tecnología de microbobinas:</strong> Circulación del aire, alivia presión articular y evita transferencia de movimiento.</li>
+      <li><strong>Tecnología de microbobinas:</strong> Circulación de aire, alivio de presión y comodidad duradera.</li>
     </ul>
     <p><strong>El clásico Topper:</strong> Espuma con memoria de gel frío + mezcla de biocristales + látex natural tailandés + carbón activado para un confort excepcional.</p>
   </div>
 
   <div class="product">
-    <img src="https://i.ibb.co/h67954e2/almohadilla.png" alt="Almohadilla Térmica SleepM" />
+    <img src="https://i.ibb.co/3y2TB7fC" alt="Almohadilla Térmica SleepM" />
     <h2>Almohadilla Térmica SleepM</h2>
     <p>Relaja músculos, reduce dolor y mejora tu energía mientras duermes.</p>
   </div>
@@ -169,32 +157,14 @@ footer { text-align:center; background:var(--dark); color:white; padding:25px; m
   </div>
 </div>
 
-<!-- SECCIÓN DE TESTIMONIOS EN VIDEO -->
-<div class="video-testimonials">
-  <div class="video-section">
-    <iframe src="https://www.youtube.com/embed/kHJeR61n_7k?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe>
-  </div>
-  <div class="video-section">
-    <iframe src="https://www.youtube.com/embed/1Igm2xKPIEg?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe>
-  </div>
-  <div class="video-section">
-    <iframe src="https://www.youtube.com/embed/v0n64DIlDjM?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe>
-  </div>
-  <div class="video-section">
-    <iframe src="https://www.youtube.com/embed/9pw1nfvnweo?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe>
-  </div>
-  <div class="video-section">
-    <iframe src="https://www.youtube.com/embed/UYYFVS3MXZc?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe>
-  </div>
-  <div class="video-section">
-    <iframe src="https://www.youtube.com/embed/1Vck6ltkwf8?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe>
-  </div>
-</div>
-
-<div class="testimonials">
-  <div class="testimonial">"La mejor terapia que he probado. Sentí alivio desde la primera sesión."</div>
-  <div class="testimonial">"El calor y la energía realmente se sienten. Muy recomendable."</div>
-  <div class="testimonial">"Dormí como nunca después de usar la colchoneta."</div>
+<div class="how-it-works">
+  <h2>Cómo Funciona SleepM</h2>
+  <ol>
+    <li>Coloca la colchoneta o almohadilla en la zona deseada.</li>
+    <li>Aplica la terapia guiada por 45 minutos.</li>
+    <li>Disfruta del alivio, relajación y mejora de energía.</li>
+    <li>Repite sesiones según necesidad o promoción vigente.</li>
+  </ol>
 </div>
 
 <div class="pricing-section">
@@ -206,6 +176,33 @@ footer { text-align:center; background:var(--dark); color:white; padding:25px; m
     <div id="countdown-timer"></div>
   </div>
   <a class="cta" href="https://calendly.com/10xsleepm/terapia-de-bienestar">Agendar mi Sesión</a>
+</div>
+
+<div class="video-testimonials">
+  <div class="video-section">
+    <iframe src="https://www.youtube.com/embed/kHJeR61n_7k?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" style="width:100%;height:220px;border:none;border-radius:14px;" allowfullscreen></iframe>
+  </div>
+  <div class="video-section">
+    <iframe src="https://www.youtube.com/embed/1Igm2xKPIEg?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" style="width:100%;height:220px;border:none;border-radius:14px;" allowfullscreen></iframe>
+  </div>
+  <div class="video-section">
+    <iframe src="https://www.youtube.com/embed/v0n64DIlDjM?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" style="width:100%;height:220px;border:none;border-radius:14px;" allowfullscreen></iframe>
+  </div>
+  <div class="video-section">
+    <iframe src="https://www.youtube.com/embed/9pw1nfvnweo?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" style="width:100%;height:220px;border:none;border-radius:14px;" allowfullscreen></iframe>
+  </div>
+  <div class="video-section">
+    <iframe src="https://www.youtube.com/embed/UYYFVS3MXZc?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" style="width:100%;height:220px;border:none;border-radius:14px;" allowfullscreen></iframe>
+  </div>
+  <div class="video-section">
+    <iframe src="https://www.youtube.com/embed/1Vck6ltkwf8?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" style="width:100%;height:220px;border:none;border-radius:14px;" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="testimonials">
+  <div class="testimonial">"La mejor terapia que he probado. Sentí alivio desde la primera sesión."</div>
+  <div class="testimonial">"El calor y la energía realmente se sienten. Muy recomendable."</div>
+  <div class="testimonial">"Dormí como nunca después de usar la colchoneta."</div>
 </div>
 
 <footer>© 2025 SleepM Products — Wellness & Bioenergy</footer>
@@ -221,12 +218,11 @@ footer { text-align:center; background:var(--dark); color:white; padding:25px; m
 </div>
 
 <script>
-/* POP-UP */
 window.onload = function() {
-  setTimeout(()=> { document.getElementById('popup').style.display='block'; }, 1500);
+  setTimeout(() => { document.getElementById('popup').style.display='block'; }, 1500);
 };
+function closePopup() { document.getElementById('popup').style.display='none'; }
 
-/* CUENTA REGRESIVA */
 let countdown = new Date().getTime() + (1000*60*60*24);
 let timerEl = document.getElementById("countdown-timer");
 let priceEl = document.getElementById("countdown-price");
@@ -236,11 +232,14 @@ let x = setInterval(function() {
   let hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
   let minutes = Math.floor((distance%(1000*60*60))/(1000*60));
   let seconds = Math.floor((distance%(1000*60))/1000);
-  if(distance < 0){ clearInterval(x); timerEl.innerHTML="¡Promoción Finalizada!"; priceEl.innerHTML="$300 USD"; }
-  else { timerEl.innerHTML = "Oferta termina en: " + hours + "h " + minutes + "m " + seconds + "s"; }
-},1000);
-
-function closePopup() { document.getElementById('popup').style.display='none'; }
+  if (distance < 0) {
+    clearInterval(x);
+    timerEl.innerHTML = "¡Promoción Finalizada!";
+    priceEl.innerHTML = "$300 USD";
+  } else {
+    timerEl.innerHTML = "Oferta termina en: " + hours + "h " + minutes + "m " + seconds + "s";
+  }
+}, 1000);
 </script>
 
 </body>
