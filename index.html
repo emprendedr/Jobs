@@ -3,27 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VisionDgtal - Sabias que Ahora Puedes Ganar $50 por 1 hr Ayudando a Personas con problemas del sueño, a reducir el estres y con el alivio de dolores?</title>
+    <title>Gana $50 por Hora | VisionDgtal - Ayuda con Problemas de Sueño, Estrés y Dolor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #9b59b6;
-            --light: #ecf0f1;
-            --dark: #2c3e50;
+            --primary: #FF6B35;
+            --secondary: #00C9B1;
+            --accent: #FFD166;
+            --light: #F8F9FA;
+            --dark: #2A2D34;
+            --purple: #9B5DE5;
+            --pink: #F15BB5;
+            --neon-green: #39FF14;
+            --telegram: #0088cc;
+            --paypal: #0070ba;
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Open Sans', sans-serif;
         }
         
         body {
             background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
         }
         
         .container {
@@ -33,97 +46,196 @@
         }
         
         header {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background: linear-gradient(135deg, var(--primary), var(--pink));
             color: white;
-            padding: 60px 0;
+            padding: 80px 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
         }
         
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            position: relative;
+            animation: fadeInDown 1s ease;
         }
         
         header p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             max-width: 800px;
             margin: 0 auto 30px;
+            position: relative;
+            animation: fadeInUp 1s ease 0.3s both;
         }
         
         .btn {
             display: inline-block;
             background-color: var(--accent);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
+            color: var(--dark);
+            padding: 15px 40px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: relative;
+            animation: pulse 2s infinite;
+            font-family: 'Montserrat', sans-serif;
+            margin: 10px;
         }
         
         .btn:hover {
-            background-color: #8e44ad;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: var(--secondary);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .btn-telegram {
+            background-color: var(--telegram);
+            color: white;
+            animation: none;
+        }
+        
+        .btn-paypal {
+            background-color: var(--paypal);
+            color: white;
+            animation: none;
+        }
+        
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
         }
         
         section {
-            padding: 60px 0;
+            padding: 80px 0;
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 40px;
-            color: var(--primary);
+            margin-bottom: 50px;
+            color: var(--dark);
+            position: relative;
+            font-size: 2.2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--pink));
+            margin: 15px auto;
+            border-radius: 2px;
         }
         
         .video-container {
             background-color: white;
-            border-radius: 10px;
+            border-radius: 15px;
             padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
         }
         
-        .video-placeholder {
-            background-color: #f1f1f1;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            color: #777;
-            font-size: 1.1rem;
+        .video-container:hover {
+            transform: translateY(-5px);
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
         
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
         }
         
         .testimonial-item {
             background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
         }
         
-        .image-placeholder {
-            background-color: #f1f1f1;
-            height: 300px;
+        .testimonial-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--pink));
+        }
+        
+        .testimonial-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .testimonial-title {
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-top: 15px;
+            text-align: center;
+        }
+        
+        .image-container {
             display: flex;
-            align-items: center;
             justify-content: center;
-            border-radius: 8px;
-            margin: 30px 0;
-            color: #777;
+            margin: 40px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease;
+        }
+        
+        .image-container:hover {
+            transform: scale(1.02);
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
         
         .how-it-works {
-            background-color: var(--light);
+            background: linear-gradient(135deg, var(--light), #eef2f5);
         }
         
         .benefits {
@@ -134,35 +246,136 @@
         
         .benefit-item {
             background-color: white;
-            padding: 25px;
-            border-radius: 8px;
+            padding: 30px 25px;
+            border-radius: 12px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .benefit-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, var(--secondary), var(--purple));
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
         
         .benefit-item h3 {
-            color: var(--primary);
+            color: var(--dark);
             margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .community-section {
+            background: linear-gradient(135deg, var(--telegram), #026aa0);
+            color: white;
+            text-align: center;
+        }
+        
+        .community-section .section-title {
+            color: white;
+        }
+        
+        .community-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
         }
         
         footer {
-            background-color: var(--dark);
+            background: linear-gradient(135deg, var(--dark), #1a1c23);
             color: white;
             text-align: center;
-            padding: 40px 0;
+            padding: 60px 0;
+        }
+        
+        /* Animaciones */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 209, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(255, 209, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 209, 102, 0);
+            }
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
         }
         
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
-            .video-placeholder {
-                height: 250px;
+            .section-title {
+                font-size: 1.8rem;
             }
             
-            .image-placeholder {
-                height: 200px;
+            .image-container {
+                margin: 30px 0;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .btn-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 80%;
+                margin: 5px;
             }
         }
     </style>
@@ -170,29 +383,31 @@
 <body>
     <!-- Imagen superior -->
     <div class="container">
-        <div class="image-placeholder">
-            [Espacio para imagen superior - Subir imagen aquí]
+        <div class="image-container animate-on-scroll">
+            <a href='https://postimg.cc/WD7fdgkb' target='_blank'>
+                <img src='https://i.postimg.cc/WD7fdgkb/Neon-Green-and-Black-Diagonal-Shape-and-Image-Web-Designer-Business-Card.png' border='0' alt='Neon-Green-and-Black-Diagonal-Shape-and-Image-Web-Designer-Business-Card'>
+            </a>
         </div>
     </div>
     
     <!-- Cabecera -->
     <header>
         <div class="container">
-            <h1>Únete a VisionDgtal y Gana $50 Ayudando a Personas a Mejorar su Visión Digital</h1>
-            <p>Esta es una oportunidad REAL, sencilla y comprobada para generar ingresos extra sin vender, sin complicaciones y ayudando a otros a mejorar su bienestar con tecnología avanzada de biocristales.</p>
-            <a href="#unete" class="btn">Únete Ahora</a>
+            <h1>Gana $50 por Hora Ayudando a Personas con Sueño, Estrés y Dolor</h1>
+            <p>Oportunidad REAL: Genera ingresos extras recomendando sesiones de bienestar. Sin ventas, sin complicaciones.</p>
+            <a href="#unete" class="btn">Comenzar a Ganar</a>
         </div>
     </header>
     
     <!-- Video de oportunidad -->
     <section>
         <div class="container">
-            <h2 class="section-title">Descubre la Oportunidad</h2>
-            <div class="video-container">
-                <div class="video-placeholder">
-                    [Espacio para video explicativo de la oportunidad - Subir video aquí]
+            <h2 class="section-title animate-on-scroll">Descubre la Oportunidad</h2>
+            <div class="video-container animate-on-scroll">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/4L9zrXHY3sA" title="Presentación de Productos VisionDgtal" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <h3>Título del video explicativo</h3>
+                <h3 style="text-align: center; color: var(--dark);">Presentación de Productos VisionDgtal</h3>
             </div>
         </div>
     </section>
@@ -200,21 +415,25 @@
     <!-- Cómo funciona -->
     <section class="how-it-works">
         <div class="container">
-            <h2 class="section-title">¿Cómo funciona?</h2>
+            <h2 class="section-title animate-on-scroll">¿Cómo Funciona?</h2>
             <div class="benefits">
-                <div class="benefit-item">
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">💎</div>
                     <h3>Valor Real</h3>
                     <p>La sesión de relajación VisionDgtal tiene un valor real de $300 USD.</p>
                 </div>
-                <div class="benefit-item">
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">🎁</div>
                     <h3>Precio Especial</h3>
-                    <p>Por Black Friday y temporada festiva, su precio es de $50 USD.</p>
+                    <p>Por temporada especial, su precio es de solo $50 USD.</p>
                 </div>
-                <div class="benefit-item">
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">💰</div>
                     <h3>Gana $50</h3>
                     <p>Por cada persona que reserve una sesión, tú ganas $50 instantáneos.</p>
                 </div>
-                <div class="benefit-item">
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">🚫</div>
                     <h3>Sin Vender</h3>
                     <p>No necesitas vender, sólo recomendar a personas que quieran sentirse mejor.</p>
                 </div>
@@ -224,40 +443,166 @@
     
     <!-- Imagen a la mitad -->
     <div class="container">
-        <div class="image-placeholder">
-            [Espacio para imagen a la mitad - Subir imagen aquí]
+        <div class="image-container animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Persona relajada después de una sesión">
         </div>
     </div>
     
     <!-- Testimonios -->
     <section>
         <div class="container">
-            <h2 class="section-title">Testimonios Reales</h2>
+            <h2 class="section-title animate-on-scroll">Testimonios Reales</h2>
             <div class="testimonials-grid">
                 <!-- Testimonio 1 -->
-                <div class="testimonial-item">
-                    <div class="video-placeholder" style="height: 200px;">
-                        [Video testimonio 1 - Subir video aquí]
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/OLzhPdS4zQI" title="Testimonio 1 - VisionDgtal" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <h3>Título del video testimonio 1</h3>
+                    <h3 class="testimonial-title">María G. - Mejoró su calidad de sueño</h3>
+                    <p style="margin-top: 10px; text-align: center; color: #666;">"Después de años de insomnio, finalmente puedo dormir toda la noche."</p>
                 </div>
                 
                 <!-- Testimonio 2 -->
-                <div class="testimonial-item">
-                    <div class="video-placeholder" style="height: 200px;">
-                        [Video testimonio 2 - Subir video aquí]
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/HvEmdpiu_ug" title="Testimonio 2 - VisionDgtal" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <h3>Título del video testimonio 2</h3>
+                    <h3 class="testimonial-title">Carlos R. - Redujo su estrés laboral</h3>
+                    <p style="margin-top: 10px; text-align: center; color: #666;">"En solo 3 sesiones mi nivel de estrés bajó significativamente."</p>
                 </div>
                 
                 <!-- Testimonio 3 -->
-                <div class="testimonial-item">
-                    <div class="video-placeholder" style="height: 200px;">
-                        [Video testimonio 3 - Subir video aquí]
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/1Igm2xKPIEg" title="Testimonio 3 - VisionDgtal" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <h3>Título del video testimonio 3</h3>
+                    <h3 class="testimonial-title">Ana L. - Alivió sus dolores crónicos</h3>
+                    <p style="margin-top: 10px; text-align: center; color: #666;">"Los dolores de espalda que tenía por años desaparecieron."</p>
                 </div>
                 
                 <!-- Testimonio 4 -->
-                <div class="testimonial-item">
-                    <div class="video-placeholder" style
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/v0n64DIlDjM" title="Testimonio 4 - VisionDgtal" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="testimonial-title">Roberto S. - Gana $500 extra mensual</h3>
+                    <p style="margin-top: 10px; text-align: center; color: #666;">"Recomendé a 10 personas y gané $500 en solo un mes."</p>
+                </div>
+                
+                <!-- Testimonio 5 -->
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/7F563bO7PZY" title="Testimonio 5 - VisionDgtal" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="testimonial-title">Laura M. - Transformó su vida</h3>
+                    <p style="margin-top: 10px; text-align: center; color: #666;">"No solo gano dinero, sino que ayudo a otros a sentirse mejor."</p>
+                </div>
+                
+                <!-- Testimonio 6 -->
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/tl9HIPiyyRk" title="Testimonio 6 - VisionDgtal" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="testimonial-title">Javier P. - Oportunidad sin inversión</h3>
+                    <p style="margin-top: 10px; text-align: center; color: #666;">"Comencé sin dinero y en mi primera semana gané $150."</p>
+                </div>
+            </div>
+            
+            <!-- Más testimonios -->
+            <h3 class="section-title animate-on-scroll" style="font-size: 1.8rem; margin-top: 60px;">Más Testimonios</h3>
+            <div class="testimonials-grid">
+                <!-- Testimonio 7 -->
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/3G2yv9fhAXU" title="Testimonio 7 - VisionDgtal" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="testimonial-title">Testimonio 7 - VisionDgtal</h3>
+                </div>
+                
+                <!-- Testimonio 8 -->
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/1Vck6ltkwf8" title="Testimonio 8 - VisionDgtal" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="testimonial-title">Testimonio 8 - VisionDgtal</h3>
+                </div>
+                
+                <!-- Testimonio 9 -->
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/ioEpmO27jec" title="Testimonio 9 - VisionDgtal" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="testimonial-title">Testimonio 9 - VisionDgtal</h3>
+                </div>
+                
+                <!-- Testimonio 10 -->
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/3AVlWOBW12A" title="Testimonio 10 - VisionDgtal" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="testimonial-title">English Testimonio - VisionDgtal</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Comunidad de Telegram -->
+    <section class="community-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Únete a Nuestra Comunidad</h2>
+            <p class="animate-on-scroll">Conéctate con otros miembros, comparte experiencias y recibe soporte directo en nuestro grupo exclusivo de Telegram.</p>
+            <div class="btn-container animate-on-scroll">
+                <a href="https://t.me/+1756ZnIKd4U2MmFh" target="_blank" class="btn btn-telegram">
+                    <i class="fab fa-telegram"></i> Unirse a Telegram
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Formulario de registro y PayPal -->
+    <section id="unete" style="background: linear-gradient(135deg, var(--secondary), var(--purple)); color: white;">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" style="color: white;">Comienza Hoy Mismo</h2>
+            <div style="max-width: 600px; margin: 0 auto;">
+                <form style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                    <input type="text" placeholder="Tu nombre completo" style="width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 8px; font-size: 1rem;">
+                    <input type="email" placeholder="Tu email" style="width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 8px; font-size: 1rem;">
+                    <input type="tel" placeholder="Tu teléfono" style="width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 8px; font-size: 1rem;">
+                    
+                    <div class="btn-container" style="margin-top: 20px;">
+                        <a href="https://www.paypal.com/invoice/p/#QEMHT3BV355WDLY6" target="_blank" class="btn btn-paypal">
+                            <i class="fab fa-paypal"></i> Comprar con PayPal
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 VisionDgtal. Todos los derechos reservados.</p>
+            <p style="margin-top: 10px; opacity: 0.8;">Transformando vidas a través del bienestar digital</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Animación al hacer scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
