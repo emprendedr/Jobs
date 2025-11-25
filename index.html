@@ -18,6 +18,10 @@
             --neon-green: #39FF14;
             --telegram: #0088cc;
             --paypal: #0070ba;
+            --tiktok: #000000;
+            --facebook: #1877F2;
+            --instagram: #E4405F;
+            --youtube: #FF0000;
         }
         
         * {
@@ -298,11 +302,83 @@
             margin: 0 auto 30px;
         }
         
-        footer {
+        .social-section {
             background: linear-gradient(135deg, var(--dark), #1a1c23);
             color: white;
             text-align: center;
             padding: 60px 0;
+        }
+        
+        .social-section .section-title {
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .social-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .social-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            padding: 15px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            width: 120px;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .social-icon i {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon-tiktok:hover i {
+            color: var(--tiktok);
+            text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        .social-icon-facebook:hover i {
+            color: var(--facebook);
+        }
+        
+        .social-icon-instagram:hover i {
+            color: var(--instagram);
+        }
+        
+        .social-icon-youtube:hover i {
+            color: var(--youtube);
+        }
+        
+        .social-icon span {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, #111317, #0a0b0e);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
         }
         
         /* Animaciones */
@@ -376,6 +452,19 @@
             .btn {
                 width: 80%;
                 margin: 5px;
+            }
+            
+            .social-icons {
+                gap: 15px;
+            }
+            
+            .social-icon {
+                width: 100px;
+                padding: 12px;
+            }
+            
+            .social-icon i {
+                font-size: 2rem;
             }
         }
     </style>
@@ -556,6 +645,32 @@
             <div class="btn-container animate-on-scroll">
                 <a href="https://t.me/+1756ZnIKd4U2MmFh" target="_blank" class="btn btn-telegram">
                     <i class="fab fa-telegram"></i> Unirse a Telegram
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Redes Sociales -->
+    <section class="social-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Síguenos en Redes Sociales</h2>
+            <p class="animate-on-scroll">Mantente actualizado con nuestros últimos contenidos, testimonios y oportunidades. ¡Conéctate con nosotros!</p>
+            <div class="social-icons animate-on-scroll">
+                <a href="https://www.tiktok.com/@jobsproducts?_r=1&_t=ZT-91geI0BKTni" target="_blank" class="social-icon social-icon-tiktok">
+                    <i class="fab fa-tiktok"></i>
+                    <span>TikTok</span>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61559604862308&mibextid=wwXIfr&mibextid=wwXIfr" target="_blank" class="social-icon social-icon-facebook">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/sleepmjobs?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" target="_blank" class="social-icon social-icon-instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://youtube.com/@10xsleepm?si=RWZ0eWzshaaK7euM" target="_blank" class="social-icon social-icon-youtube">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
                 </a>
             </div>
         </div>
