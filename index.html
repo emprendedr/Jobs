@@ -49,6 +49,84 @@
             padding: 0 20px;
         }
         
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--pink));
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            position: relative;
+            animation: fadeInDown 1s ease;
+            line-height: 1.3;
+        }
+        
+        header p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            position: relative;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: relative;
+            animation: pulse 2s infinite;
+            font-family: 'Montserrat', sans-serif;
+            margin: 10px;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .btn-telegram {
+            background-color: var(--telegram);
+            color: white;
+            animation: none;
+        }
+        
+        .btn-paypal {
+            background-color: var(--paypal);
+            color: white;
+            animation: none;
+        }
+        
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
         section {
             padding: 80px 0;
         }
@@ -71,6 +149,100 @@
             border-radius: 2px;
         }
         
+        .video-container {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+        
+        .video-container:hover {
+            transform: translateY(-5px);
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .testimonial-item {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--pink));
+        }
+        
+        .testimonial-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .testimonial-title {
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-top: 15px;
+            text-align: center;
+        }
+        
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease;
+        }
+        
+        .image-container:hover {
+            transform: scale(1.02);
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .how-it-works {
+            background: linear-gradient(135deg, var(--light), #eef2f5);
+        }
+        
         .benefits {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -88,42 +260,628 @@
             overflow: hidden;
         }
         
+        .benefit-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, var(--secondary), var(--purple));
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
         .benefit-item h3 {
             color: var(--dark);
             margin-bottom: 15px;
             font-size: 1.4rem;
         }
         
-        .benefit-item p {
-            color: #666;
-            margin-bottom: 15px;
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
         }
-
-        /* Additional styles for new content */
-        .extra-content {
-            margin-top: 40px;
-            border: 2px dashed var(--accent);
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+        
+        .opportunity-section {
+            background: linear-gradient(135deg, var(--purple), var(--pink));
+            color: white;
+            text-align: center;
+            padding: 80px 0;
         }
-        .extra-content p {
+        
+        .opportunity-section .section-title {
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .opportunity-content {
+            max-width: 900px;
+            margin: 0 auto;
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #444;
+        }
+        
+        .opportunity-highlight {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 25px 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .countdown-section {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .countdown-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .countdown-title {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .countdown-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            min-width: 120px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .countdown-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .countdown-label {
+            font-size: 1rem;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+        
+        .price-comparison {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .price-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            min-width: 200px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .price-current {
+            border: 3px solid var(--accent);
+            transform: scale(1.05);
+        }
+        
+        .price-amount {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .price-current .price-amount {
+            color: var(--accent);
+            text-shadow: 0 0 10px rgba(255, 209, 102, 0.5);
+        }
+        
+        .price-description {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .community-section {
+            background: linear-gradient(135deg, var(--telegram), #026aa0);
+            color: white;
+            text-align: center;
+        }
+        
+        .community-section .section-title {
+            color: white;
+        }
+        
+        .community-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .social-section {
+            background: linear-gradient(135deg, var(--dark), #1a1c23);
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .social-section .section-title {
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .social-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .social-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            padding: 15px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            width: 120px;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .social-icon i {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon-tiktok:hover i {
+            color: var(--tiktok);
+            text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        .social-icon-facebook:hover i {
+            color: var(--facebook);
+        }
+        
+        .social-icon-instagram:hover i {
+            color: var(--instagram);
+        }
+        
+        .social-icon-youtube:hover i {
+            color: var(--youtube);
+        }
+        
+        .social-icon span {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, #111317, #0a0b0e);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        /* Animaciones */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 209, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(255, 209, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 209, 102, 0);
+            }
+        }
+        
+        @keyframes pulseRed {
+            0% {
+                box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(231, 76, 60, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+            }
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .image-container {
+                margin: 30px 0;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .btn-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 80%;
+                margin: 5px;
+            }
+            
+            .social-icons {
+                gap: 15px;
+            }
+            
+            .social-icon {
+                width: 100px;
+                padding: 12px;
+            }
+            
+            .social-icon i {
+                font-size: 2rem;
+            }
+            
+            .opportunity-content {
+                font-size: 1.1rem;
+            }
+            
+            .opportunity-highlight {
+                font-size: 1.2rem;
+            }
+            
+            .countdown-timer {
+                gap: 10px;
+            }
+            
+            .countdown-item {
+                min-width: 80px;
+                padding: 15px;
+            }
+            
+            .countdown-number {
+                font-size: 2rem;
+            }
+            
+            .price-comparison {
+                gap: 20px;
+            }
+            
+            .price-item {
+                min-width: 150px;
+                padding: 20px;
+            }
+            
+            .price-amount {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Imagen superior -->
+    <div class="container">
+        <div class="image-container animate-on-scroll">
+            <img src="https://i.postimg.cc/QCpr58PS/Gemini-Generated-Image-rtag9nrtag9nrtag.png" alt="VisionDgtal - Bienestar con Biocristales">
+        </div>
+    </div>
+    
+    <!-- Cabecera -->
+    <header>
+        <div class="container">
+            <h1>Muchos quisieran dormir mejor, aliviar el dolor y reducir el estrés… y ahora existe un sistema que te permite ganar $50 por hora ayudándolos, aunque estés empezando.</h1>
+            <p>Oportunidad REAL: Genera ingresos extras recomendando sesiones de bienestar. Sin ventas, sin complicaciones.</p>
+            <a href="#unete" class="btn">Comenzar a Ganar</a>
+        </div>
+    </header>
+    
     <!-- Video de oportunidad -->
     <section>
         <div class="container">
             <h2 class="section-title animate-on-scroll">Descubre la Oportunidad</h2>
             <div class="video-container animate-on-scroll">
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/4L9zrXHY3sA" title="Presentación de Productos de Biocristales para tu bienestar"></iframe>
+                    <iframe src="https://www.youtube.com/embed/4L9zrXHY3sA" title="Presentación de Productos de Biocristales para tu bienestar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <h3 style="text-align: center; color: var(--dark);">Cómo usar el sistema</h3>
+                <h3 style="text-align: center; color: var(--dark);">Presentación de Productos de Biocristales para tu bienestar</h3>
             </div>
- <!-- CONTENIDOS EXTRAS-- DEPRÉS
+        </div>
+    </section>
+    
+    <!-- Nueva Sección de Oportunidad de Prosperidad -->
+    <section class="opportunity-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Oportunidad de Prosperidad</h2>
+            <div class="opportunity-content animate-on-scroll">
+                <p>Este sistema no solo puede abrirte las puertas para ganar $50, $100 o incluso $500 al día… también te ayudará a desbloquear nuevos niveles de prosperidad que descubrirás en el camino si decides tomar esta oportunidad hoy.</p>
+                
+                <p class="opportunity-highlight">Mientras tanto, te mostraremos cómo funciona este servicio que ofrecemos; después podrás ver testimonios reales y, al final, simplemente tomar acción masiva.</p>
+                
+                <p>Aquí tendrás la oportunidad de ganar $50 por duplicar este sistema y recibir también una porción adicional cuando tus clientes adquieran los productos de la compañía y te conviertas en un distribuidor calificado.</p>
+                
+                <p class="opportunity-highlight">La oferta para ingresar con solo $50 es por tiempo limitado. Con ello recibes una sesión de relajación para tu bienestar de 45 minutos y un sistema que opere por ti 24 horas al día por todo el año.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contador de Oferta por Tiempo Limitado -->
+    <section class="countdown-section">
+        <div class="container">
+            <div class="countdown-container animate-on-scroll">
+                <h2 class="countdown-title">¡OFERTA POR TIEMPO LIMITADO!</h2>
+                <p class="countdown-subtitle">La oferta de $50 finaliza después del Black Friday y subirá a $100</p>
+                
+                <div class="countdown-timer">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">00</div>
+                        <div class="countdown-label">Días</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-label">Horas</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-label">Minutos</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-label">Segundos</div>
+                    </div>
+                </div>
+                
+                <div class="price-comparison">
+                    <div class="price-item price-current">
+                        <div class="price-amount">$50</div>
+                        <div class="price-description">Precio Actual</div>
+                        <div class="price-description">¡Oferta Especial!</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-amount">$100</div>
+                        <div class="price-description">Precio Después</div>
+                        <div class="price-description">del Black Friday</div>
+                    </div>
+                </div>
+                
+                <a href="#unete" class="btn" style="animation: pulseRed 2s infinite; margin-top: 30px;">
+                    <i class="fas fa-bolt"></i> Obtener Oferta $50
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Cómo funciona -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">¿Cómo Funciona?</h2>
+            <div class="benefits">
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">💎</div>
+                    <h3>Valor Real</h3>
+                    <p>La sesión de relajación VisionDgtal tiene un valor real de $300 USD.</p>
+                </div>
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">🎁</div>
+                    <h3>Precio Especial</h3>
+                    <p>Por temporada especial, su precio es de solo $50 USD.</p>
+                </div>
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Gana $50</h3>
+                    <p>Por cada persona que reserve una sesión, tú ganas $50 instantáneos.</p>
+                </div>
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">🚫</div>
+                    <h3>Sin Vender</h3>
+                    <p>No necesitas vender, solo recomendar a personas que quieran sentirse mejor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Imagen a la mitad -->
+    <div class="container">
+        <div class="image-container animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Persona relajada después de una sesión">
+        </div>
+    </div>
+    
+    <!-- Testimonios -->
+    <section>
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Testimonios Reales</h2>
+            <div class="testimonials-grid">
+                <!-- Testimonio 1 -->
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/OLzhPdS4zQI" title="Su esposo deja de roncar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="testimonial-title">Su esposo deja de roncar</h3>
+                    <p style="margin-top: 10px; text-align: center; color: #666;">Una colchoneta de Biocristales le ayuda a regular el sueño a su esposo y ella se alivia de un dolor de costillas.</p>
+                </div>
+                
+                <!-- Testimonio 2 -->
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/HvEmdpiu_ug" title="Bety se alivia de un dolor causado por una caída" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="testimonial-title">Bety se alivia de un dolor causado por una caída donde se fracturó 5 costillas</h3>
+                    <p style="margin-top: 10px; text-align: center; color: #666;">Se siente muy contenta por haber conocido esta oportunidad.</p>
+                </div>
+                
+                <!-- Testimonio 3 -->
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/1Igm2xKPIEg" title="Lupus y Tiroidismo desaparecen" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="testimonial-title">Lupus y Tiroidismo desaparecen</h3>
+                    <p style="margin-top: 10px; text-align: center; color: #666;">Lo recomiendo para aquellos que cuidan de su salud.</p>
+                </div>
+                
+                <!-- Testimonio 4 -->
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/v0n64DIlDjM" title="Me redujo el dolor del brazo y de mi costado debido a una caída" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="testimonial-title">Me redujo el dolor del brazo y de mi costado debido a una caída</h3>
+                    <p style="margin-top: 10px; text-align: center; color: #666;">Gracias al heating pad me siento mejor. Se los recomiendo.</p>
+                </div>
+                
+                <!-- Testimonio 5 -->
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/7F563bO7PZY" title="Me quitó el dolor del cuello y de la espalda debido a un accidente automovilístico" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="testimonial-title">Me quitó el dolor del cuello y de la espalda debido a un accidente automovilístico</h3>
+                    <p style="margin-top: 10px; text-align: center; color: #666;">Esto es muy bueno, se los recomiendo. Estoy muy contenta, me siento mejor.</p>
+                </div>
+                
+                <!-- Testimonio 6 -->
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/tl9HIPiyyRk" title="Congestión del Colon se destapa y el dolor desaparece" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="testimonial-title">Congestión del Colon se destapa y el dolor desaparece</h3>
+                    <p style="margin-top: 10px; text-align: center; color: #666;">El dolor fuerte de mi espalda disminuyó y lo recomiendo totalmente.</p>
+                </div>
+            </div>
+            
+            <!-- Más testimonios -->
+            <h3 class="section-title animate-on-scroll" style="font-size: 1.8rem; margin-top: 60px;">Más Testimonios</h3>
+            <div class="testimonials-grid">
+                <!-- Testimonio 7 -->
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/3G2yv9fhAXU" title="El antifaz me ayudó para mejorar la vista" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="testimonial-title">El antifaz me ayudó para mejorar la vista</h3>
+                    <p style="margin-top: 10px; text-align: center; color: #666;">Ya puedo leer mejor, estoy muy contenta.</p>
+                </div>
+                
+                <!-- Testimonio 8 -->
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/1Vck6ltkwf8" title="El heating pad me ayudó a reducir el dolor de la próstata" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="testimonial-title">El heating pad me ayudó a reducir el dolor de la próstata de un 100% a un 30%</h3>
+                    <p style="margin-top: 10px; text-align: center; color: #666;">Estoy muy contento de haber tomado la terapia.</p>
+                </div>
+                
+                <!-- Testimonio 9 -->
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/ioEpmO27jec" title="Una almohada de Biocristales me ayudó para el dolor crónico del cuello" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="testimonial-title">Una almohada de Biocristales me ayudó para el dolor crónico del cuello</h3>
+                    <p style="margin-top: 10px; text-align: center; color: #666;">Que traía desde hace muchos años. Estoy muy feliz de haber encontrado estos productos.</p>
+                </div>
+                
+                <!-- Testimonio 10 -->
+                <div class="testimonial-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/3AVlWOBW12A" title="La almohada de Biocristales le ayudó a mi esposo a regenerar el cuero cabelludo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="testimonial-title">La almohada de Biocristales le ayudó a mi esposo a regenerar el cuero cabelludo</h3>
+                    <p style="margin-top: 10px; text-align: center; color: #666;">Y ahora ya tiene más cabello.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Comunidad de Telegram -->
+    <section class="community-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Únete a Nuestra Comunidad</h2>
+            <p class="animate-on-scroll">Conéctate con otros miembros, comparte experiencias y recibe soporte directo en nuestro grupo exclusivo de Telegram.</p>
+            <div class="btn-container animate-on-scroll">
+                <a href="https://t.me/+1756ZnIKd4U2MmFh" target="_blank" class="btn btn-telegram">
+                    <i class="fab fa-telegram"></i> Unirse a Telegram
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Redes Sociales -->
+    <section class="social-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Síguenos en Redes Sociales</h2>
+            <p class="animate-on-scroll">Mantente actualizado con nuestros últimos contenidos, testimonios y oportunidades. ¡Conéctate con nosotros!</p>
+            <div class="social-icons animate-on-scroll">
+                <a href="https://www.tiktok.com/@jobsproducts?_r=1&_t=ZT-91geI0BKTni" target="_blank" class="social-icon social-icon-tiktok">
+                    <
