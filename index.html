@@ -8,197 +8,110 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
 <style>
+
+/* ===== COLORES PRINCIPALES ===== */
 :root {
   --primary:#ff416c;
   --secondary:#ff4b2b;
   --accent:#36d1dc;
   --highlight:#ffd60a;
   --dark:#111827;
-  --light:#f0f8ff;
-  --radius:16px;
+  --light:#ffffff;
+  --radius:18px;
 }
 
-/* BODY */
+/* ===== BODY ===== */
 body {
   margin:0;
   font-family:'Montserrat', sans-serif;
-  background: linear-gradient(135deg,#f0f8ff,#ffffff);
-  color: var(--dark);
-  overflow-x:hidden;
+  background:#f5f9ff;
+  color:var(--dark);
 }
 
-/* TIPOGRAFÍA ANIMADA */
-h1,h2,h3,h4 { font-family:'Playfair Display', serif; }
-h1 {
-  font-size:4em; 
-  font-weight:900;
-  text-align:center;
-  margin-bottom:10px;
-  background: linear-gradient(90deg, #ffd60a, #ff416c, #36d1dc);
-  -webkit-background-clip:text;
-  color:transparent;
-  line-height:1.2;
-}
-h2 { font-size:2em; text-align:center; margin:15px 0; color:var(--primary);}
-h3 { font-size:1.5em; color:var(--secondary); margin:10px 0;}
-p { font-size:1em; line-height:1.6; }
-
-/* ANIMACIONES */
-@keyframes fadeInDown { from {opacity:0; transform:translateY(-50px);} to {opacity:1; transform:translateY(0);} }
-@keyframes fadeInUp { from {opacity:0; transform:translateY(50px);} to {opacity:1; transform:translateY(0);} }
-@keyframes pulse { 0%{transform:scale(1);}50%{transform:scale(1.05);}100%{transform:scale(1);} }
-@keyframes float{0%{transform:translateY(0);}50%{transform:translateY(-10px);}100%{transform:translateY(0);} }
-@keyframes gradientBG {0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
-
-/* ENCABEZADO */
+/* ===== ENCABEZADO ===== */
 header {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  color: white;
-  padding: 150px 20px;
-  text-align: center;
-  overflow: hidden;
+  background:linear-gradient(135deg,#1e3c72,#2a5298);
+  padding:130px 20px;
+  text-align:center;
+  color:white;
+}
+header h1 {
+  font-size:3em;
+  font-family:'Playfair Display', serif;
 }
 header p {
-  font-size: 1.6em;
-  margin-top: 15px;
-  color: #f0f8ff;
-  opacity: 0.9;
+  font-size:1.3em;
 }
 
-/* VIDEOS PRINCIPAL Y TESTIMONIOS */
-.video-section, .testimonial iframe {
-  max-width:1000px;
-  margin:30px auto;
+/* ===== NUEVO ESTILO DE SECCIÓN DE VIDEOS ===== */
+.video-block {
+  max-width:960px;
+  margin:40px auto;
+  background:white;
+  padding:25px;
   border-radius:var(--radius);
-  overflow:hidden;
-  position:relative;
-  box-shadow:0 8px 25px rgba(0,0,0,0.2);
-  background:black;
+  box-shadow:0 12px 35px rgba(0,0,0,0.15);
+}
+.video-block h3 {
+  margin-bottom:15px;
+  font-size:1.4em;
+  font-weight:700;
+  color:#2a5298;
+  text-align:center;
 }
 .video-wrapper {
   position:relative;
   width:100%;
-  padding-bottom:56.25%; /* 16:9 */
+  padding-bottom:56.25%;
+  border-radius:var(--radius);
+  overflow:hidden;
+  background:black;
 }
 .video-wrapper iframe {
-  position:absolute; top:0; left:0; width:100%; height:100%; border:none;
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0; left:0;
+  border:none;
 }
-.video-overlay {
-  position:absolute; top:0; left:0; width:100%; height:100%; background:transparent; z-index:2; cursor:pointer;
-}
-.play-btn {
-  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-  z-index:3; background:var(--highlight); color:var(--dark); border:none; border-radius:50%;
-  width:70px; height:70px; font-size:2em; font-weight:bold; cursor:pointer;
-  box-shadow:0 5px 15px rgba(0,0,0,0.3); transition:0.3s;
-}
-.play-btn:hover { transform:translate(-50%,-50%) scale(1.1); }
 
-/* PRODUCTOS */
-.products {
-  max-width:1000px;
-  margin:40px auto;
-  padding:0 15px;
-  display:flex;
-  flex-direction:column;
-  gap:40px;
+/* ===== TESTIMONIOS ===== */
+.testimonials-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+  max-width:960px;
+  margin:20px auto 60px;
 }
-.product {
+@media(max-width:768px){
+  .testimonials-grid { grid-template-columns:1fr; }
+}
+
+.testimonial-card {
   background:white;
-  padding:25px;
-  border-radius:var(--radius);
-  box-shadow:0 8px 25px rgba(0,0,0,0.15);
-  display:flex; flex-direction:column; align-items:center;
-  transition:0.3s;
-}
-.product:hover {transform:scale(1.05); box-shadow:0 12px 30px rgba(0,0,0,0.2);}
-.product img { width:90%; max-width:380px; border-radius:var(--radius); margin-bottom:15px; animation:float 4s ease-in-out infinite;}
-
-/* DETALLES */
-.details {
-  max-width:900px;
-  margin:30px auto;
-  background:white;
-  padding:25px;
-  border-radius:var(--radius);
-  box-shadow:0 8px 25px rgba(0,0,0,0.15);
-}
-.details h3{margin-bottom:15px;}
-.details p, .details ul, .details li { font-size:1em; line-height:1.6; margin-bottom:10px; }
-.details ul{padding-left:20px;}
-.details li{margin-bottom:6px;}
-
-/* PRECIO Y CTA */
-.pricing-section {
-  max-width:95%;
-  margin:40px auto;
-  padding:25px;
-  background: linear-gradient(135deg,var(--accent),var(--secondary));
-  border-radius:var(--radius);
-  color:white; text-align:center;
-  box-shadow:0 10px 25px rgba(0,0,0,0.2);
-}
-.pricing-section h2{font-size:2em; margin-bottom:15px; font-weight:700;}
-.price-box {margin-top:15px;}
-.price-box .old {text-decoration:line-through; font-size:1.2em; opacity:0.8;}
-.price-box .new {font-size:2em; font-weight:700; color:var(--highlight);}
-.cta{
-  display:inline-block;
-  margin-top:20px;
-  background:var(--highlight);
-  color:var(--dark);
-  padding:14px 24px;
-  border-radius:var(--radius);
-  font-weight:700;
-  font-size:1em;
-  text-decoration:none;
-  transition:0.3s;
-  animation:pulse 2s infinite;
-}
-.cta:hover{background:var(--primary); color:white;}
-
-/* TESTIMONIOS ANIMADOS */
-.video-testimonials {
-  max-width:1000px;
-  margin:40px auto;
   padding:20px;
   border-radius:var(--radius);
-  background:linear-gradient(-45deg,var(--primary),var(--secondary),var(--accent),var(--highlight));
-  background-size:400% 400%;
-  animation:gradientBG 15s ease infinite;
+  box-shadow:0 12px 35px rgba(0,0,0,0.12);
 }
-.video-testimonials h2 {
-  text-align:center; color:white; margin-bottom:20px; text-shadow:2px 2px 8px rgba(0,0,0,0.4);
-}
-.testimonials { max-width:95%; margin:20px auto; display:flex; flex-direction:column; gap:25px; }
-.testimonial { position:relative; overflow:hidden; border-radius:var(--radius); box-shadow:0 8px 25px rgba(0,0,0,0.25); transition:transform 0.3s; }
-.testimonial:hover {transform:scale(1.03);}
-.testimonial iframe {width:100%; height:220px; border:none; border-radius:var(--radius);}
-
-/* FOOTER */
-footer {
+.testimonial-card h4 {
   text-align:center;
+  margin-bottom:12px;
+  color:#ff416c;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  margin-top:40px;
+  text-align:center;
+  padding:35px;
   background:linear-gradient(135deg,var(--primary),var(--secondary));
   color:white;
-  padding:40px 25px;
-  margin-top:40px;
-  font-size:0.95em;
-  border-top-left-radius:20px;
-  border-top-right-radius:20px;
 }
 
-/* SCROLL REVEAL INICIAL */
-header, .video-section, .product, .details, .pricing-section, .video-testimonials, footer { opacity:0; transform:translateY(50px); }
 
-/* RESPONSIVE */
-@media(max-width:600px){
-header h1{font-size:2.2em;}
-header p{font-size:1em;}
-.product h2{font-size:1.5em;}
-.product p{font-size:0.95em;}
-.cta{width:90%; font-size:1em; padding:12px;}
-.details h3{font-size:1.3em;}
-.testimonial iframe{height:180px;}
+/* ===== SISTEMA STOP-OTHER-VIDEOS ===== */
+iframe {
+  pointer-events:auto;
 }
 </style>
 </head>
@@ -206,111 +119,90 @@ header p{font-size:1em;}
 
 <header>
   <h1>Cuida tu sueño, transforma tu vida con Biocristales</h1>
-  <p>Te ayuda a dormir mejor, reduce el estrés y alivia tus dolores</p>
+  <p>Te ayuda a dormir mejor, reducir el estrés y aliviar dolores.</p>
 </header>
 
-<div class="video-section">
+<!-- ==========================
+   VIDEO PRINCIPAL
+=========================== -->
+<div class="video-block">
+  <h3>Video Explicativo de la Tecnología SleepM</h3>
   <div class="video-wrapper">
-    <iframe id="mainVideo" src="https://www.youtube.com/embed/kk7nsjGcp-k?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe>
-    <div class="video-overlay" id="videoOverlay"></div>
-    <button class="play-btn" id="playBtn">▶</button>
+    <iframe class="videoFrame" src="https://www.youtube.com/embed/kk7nsjGcp-k?enablejsapi=1&rel=0&modestbranding=1"></iframe>
   </div>
 </div>
 
-<div class="products">
-  <div class="product">
-    <img src="https://i.postimg.cc/9X8ZQ7F7/IMG-2920.png" alt="Colchoneta Energética SleepM">
-    <h2>Colchoneta Energética SleepM</h2>
-    <p>Descanso profundo, balance energético y rejuvenecimiento celular.</p>
+<!-- ==========================
+   TESTIMONIOS
+=========================== -->
+<h2 style="text-align:center; margin-top:50px; color:#2a5298;">Testimonios Reales</h2>
+
+<div class="testimonials-grid">
+
+  <div class="testimonial-card">
+    <h4>Testimonio 1</h4>
+    <div class="video-wrapper">
+      <iframe class="videoFrame" src="https://www.youtube.com/embed/kHJeR61n_7k?enablejsapi=1"></iframe>
+    </div>
   </div>
 
-  <div class="details">
-    <h3>Los mejores materiales</h3>
-    <ul>
-      <li><strong>Espuma con memoria de gel frío:</strong> Diseñada por la NASA, absorbe impactos y maximiza el descanso.</li>
-      <li><strong>Carbón activado:</strong> Mejora desintoxicación, bloquea EMF y ayuda a la circulación.</li>
-      <li><strong>Energía biocristalina:</strong> 18 cristales equilibran flujo energético y bienestar general.</li>
-      <li><strong>Tecnología de microbobinas:</strong> Circulación de aire, alivio de presión y comodidad duradera.</li>
-    </ul>
+  <div class="testimonial-card">
+    <h4>Testimonio 2</h4>
+    <div class="video-wrapper">
+      <iframe class="videoFrame" src="https://www.youtube.com/embed/1Igm2xKPIEg?enablejsapi=1"></iframe>
+    </div>
   </div>
 
-  <div class="product">
-    <img src="https://i.postimg.cc/q68zVRqB/IMG-2918.jpg" alt="Almohadilla Térmica SleepM">
-    <h2>Almohadilla Térmica SleepM</h2>
-    <p>Relaja músculos, reduce dolor y mejora tu energía mientras duermes.</p>
+  <div class="testimonial-card">
+    <h4>Testimonio 3</h4>
+    <div class="video-wrapper">
+      <iframe class="videoFrame" src="https://www.youtube.com/embed/v0n64DIlDjM?enablejsapi=1"></iframe>
+    </div>
   </div>
 
-  <div class="details">
-    <h3>La única almohadilla eléctrica que necesitará</h3>
-    <ul>
-      <li>Distribución del calor superior.</li>
-      <li>Bolsa de grafito lavable.</li>
-      <li>Producto más vendido, ¡hazte con uno mientras duren existencias!</li>
-    </ul>
+  <div class="testimonial-card">
+    <h4>Testimonio 4</h4>
+    <div class="video-wrapper">
+      <iframe class="videoFrame" src="https://www.youtube.com/embed/9pw1nfvnweo?enablejsapi=1"></iframe>
+    </div>
   </div>
+
 </div>
 
-<div class="pricing-section">
-  <h2>Agenda tu Sesión de Terapia SleepM</h2>
-  <div class="price-box">
-    <div class="old">$300 USD</div>
-    <div class="new">$50 USD</div>
-    <p><strong>Promoción Black Friday — 45 minutos</strong></p>
-    <ul style="list-style:circle; margin-left:20px;">
-      <li>Opción de <strong>clonar el sistema</strong> para tu negocio.</li>
-      <li>Ganas <strong>$50 USD</strong> por cada nuevo miembro que tome la terapia.</li>
-      <li>Disfrutas de la sesión con productos SleepM de alta calidad.</li>
-    </ul>
-  </div>
-  <a class="cta" href="https://calendly.com/10xsleepm/terapia-de-bienestar" target="_blank">Agendar mi Sesión</a>
-  <a class="cta" href="https://www.paypal.com/invoice/p/#58N7Q6NGLEPJCQ5L" target="_blank" style="margin-top:15px;">Pagar mi Sesión</a>
-</div>
-
-<div class="video-testimonials">
-  <h2>Testimonios de Clientes</h2>
-  <div class="testimonials">
-    <div class="testimonial"><iframe src="https://www.youtube.com/embed/kHJeR61n_7k?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe></div>
-    <div class="testimonial"><iframe src="https://www.youtube.com/embed/1Igm2xKPIEg?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe></div>
-    <div class="testimonial"><iframe src="https://www.youtube.com/embed/v0n64DIlDjM?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe></div>
-    <div class="testimonial"><iframe src="https://www.youtube.com/embed/9pw1nfvnweo?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe></div>
-    <div class="testimonial"><iframe src="https://www.youtube.com/embed/UYYFVS3MXZc?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe></div>
-    <div class="testimonial"><iframe src="https://www.youtube.com/embed/1Vck6ltkwf8?controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1" allowfullscreen></iframe></div>
-  </div>
-</div>
 
 <footer>© 2025 SleepM Products — Wellness & Bioenergy</footer>
 
+
+<!-- ==========================
+  JAVASCRIPT — STOP OTHER VIDEOS
+=========================== -->
 <script>
-// Video principal con botón play
-const playBtn = document.getElementById('playBtn');
-const overlay = document.getElementById('videoOverlay');
-const video = document.getElementById('mainVideo');
+// Función que pausa todos los videos excepto el que se reproduce
+let players = [];
 
-playBtn.addEventListener('click', ()=>{
-  video.src += "&autoplay=1";
-  playBtn.style.display='none';
-  overlay.style.display='none';
-});
-
-// Scroll Reveal
-const revealElements = document.querySelectorAll('header, .video-section, .product, .details, .pricing-section, .video-testimonials, footer');
-const revealOnScroll = () => {
-  const windowHeight = window.innerHeight;
-  revealElements.forEach(el => {
-    const elementTop = el.getBoundingClientRect().top;
-    const revealPoint = 150;
-    if(elementTop < windowHeight - revealPoint){
-      el.style.opacity = 1;
-      el.style.transform = 'translateY(0)';
-      el.style.transition = 'all 1s ease-out';
-    } else {
-      el.style.opacity = 0;
-      el.style.transform = 'translateY(50px)';
-    }
+function onYouTubeIframeAPIReady() {
+  const iframes = document.querySelectorAll(".videoFrame");
+  iframes.forEach((iframe, index) => {
+    players[index] = new YT.Player(iframe, {
+      events:{
+        'onStateChange': event => {
+          if(event.data === YT.PlayerState.PLAYING){
+            players.forEach((p,i)=>{
+              if(i !== index){
+                p.pauseVideo();
+              }
+            });
+          }
+        }
+      }
+    });
   });
 }
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
+
+// Cargar API de YouTube
+let tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+document.body.appendChild(tag);
 </script>
 
 </body>
