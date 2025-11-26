@@ -367,6 +367,47 @@
             border: 3px solid #4caf50;
         }
         
+        .new-guarantee-section {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 3px solid #2196f3;
+            text-align: left;
+        }
+        
+        .new-guarantee-section h3 {
+            color: #1565c0;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+        
+        .new-guarantee-section h4 {
+            color: #0d47a1;
+            margin: 25px 0 15px;
+            font-size: 1.3rem;
+        }
+        
+        .benefit-list {
+            list-style-type: none;
+            margin: 20px 0;
+        }
+        
+        .benefit-list li {
+            padding: 10px 0 10px 40px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        
+        .benefit-list li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            font-size: 1.2rem;
+        }
+        
         .urgency-section {
             background: linear-gradient(135deg, #fff3e0, #ffecb3);
             padding: 30px;
@@ -628,6 +669,253 @@
             transform: scale(1.1);
         }
         
+        /* Estilos para el chatbot */
+        .chatbot-container {
+            position: fixed;
+            bottom: 120px;
+            right: 40px;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .chatbot-header {
+            background: linear-gradient(135deg, var(--primary), var(--pink));
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chatbot-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .chatbot-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .message {
+            max-width: 80%;
+            padding: 12px 15px;
+            border-radius: 18px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .bot-message {
+            background: #f1f1f1;
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+        }
+        
+        .user-message {
+            background: var(--primary);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .chatbot-input {
+            display: flex;
+            padding: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .chatbot-input input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+            font-size: 0.9rem;
+        }
+        
+        .chatbot-input button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            margin-left: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .chatbot-input button:hover {
+            background: var(--secondary);
+        }
+        
+        .chatbot-toggle {
+            position: fixed;
+            bottom: 190px;
+            right: 40px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--secondary), var(--purple));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 100;
+            animation: pulse 2s infinite;
+        }
+        
+        .quick-questions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .quick-question {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 20px;
+            padding: 8px 15px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+        
+        .quick-question:hover {
+            background: #e9ecef;
+        }
+        
+        /* Nuevos estilos para sección de Miembro Pro */
+        .pro-membership-section {
+            background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+            padding: 60px 0;
+        }
+        
+        .pro-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .pro-benefit-item {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            text-align: center;
+        }
+        
+        .pro-benefit-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .pro-benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--pink);
+        }
+        
+        .commission-highlight {
+            background: linear-gradient(135deg, #ffeb3b, #ff9800);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+            color: #333;
+        }
+        
+        .commission-amount {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .product-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .product-item {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            text-align: center;
+        }
+        
+        .product-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .product-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 15px 0;
+        }
+        
+        .promo-badge {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .global-benefit {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+            border: 2px solid #4caf50;
+        }
+        
         /* Animaciones */
         @keyframes fadeInDown {
             from {
@@ -772,17 +1060,65 @@
                 font-size: 2rem;
             }
             
-            .whatsapp-float {
+            .whatsapp-float, .chatbot-toggle {
                 width: 50px;
                 height: 50px;
                 bottom: 20px;
                 right: 20px;
                 font-size: 25px;
             }
+            
+            .chatbot-container {
+                width: 300px;
+                height: 450px;
+                bottom: 90px;
+                right: 20px;
+            }
+            
+            .chatbot-toggle {
+                bottom: 150px;
+                right: 20px;
+            }
+            
+            .commission-amount {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Chatbot -->
+    <div class="chatbot-toggle" id="chatbotToggle">
+        <i class="fas fa-robot"></i>
+    </div>
+    
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <h3>Asistente Virtual</h3>
+            <button class="chatbot-close" id="chatbotClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message bot-message">
+                ¡Hola! Soy tu asistente virtual. Estoy aquí para responder tus preguntas sobre nuestro sistema de ingresos. ¿En qué puedo ayudarte?
+                
+                <div class="quick-questions">
+                    <div class="quick-question" data-question="¿Realmente funciona sin experiencia?">¿Realmente funciona sin experiencia?</div>
+                    <div class="quick-question" data-question="¿Cuándo empiezo a ganar dinero?">¿Cuándo empiezo a ganar dinero?</div>
+                    <div class="quick-question" data-question="¿Cómo me convierto en Miembro Pro?">¿Cómo me convierto en Miembro Pro?</div>
+                    <div class="quick-question" data-question="¿Qué productos de Sleepm pagan más?">¿Qué productos de Sleepm pagan más?</div>
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Escribe tu pregunta...">
+            <button id="chatbotSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
     <!-- Chat flotante de WhatsApp -->
     <a href="https://wa.me/+13232850508?text=Hola,%20quiero%20más%20información%20sobre%20VisionDgtal" 
        class="whatsapp-float" target="_blank">
@@ -876,15 +1212,121 @@
         </div>
     </section>
     
-    <!-- Garantía -->
+    <!-- Nueva Garantía de Transformación -->
     <div class="container">
-        <div class="guarantee-section animate-on-scroll">
-            <h3 style="color: #2e7d32; margin-bottom: 15px;">
-                <i class="fas fa-shield-alt"></i> Garantía de 30 Días "Sin Riesgo"
-            </h3>
-            <p style="font-size: 1.2rem; color: #333;">Si en 30 días no has generado al menos $500 en ingresos, te devolvemos el 100% de tu inversión. Sin preguntas.</p>
+        <div class="new-guarantee-section animate-on-scroll">
+            <h3><i class="fas fa-shield-alt"></i> Garantía de Transformación de 30 Días — Sin Reembolsos, Pero Con Más Oportunidades</h3>
+            
+            <p>Queremos que tomes esta decisión con total confianza. Por eso te ofrecemos una garantía diferente: Una garantía que impulsa tu crecimiento y te abre más puertas, en lugar de dejarte donde empezaste.</p>
+            
+            <p>Durante los primeros 30 días, si sientes que no estás avanzando como deseas, no ofrecemos reembolsos, porque desde el primer día recibes acceso completo a herramientas, mentoría, sistemas y recursos digitales de alto valor que no se pueden "devolver".</p>
+            
+            <h4>Pero aquí está lo importante:</h4>
+            <p>Si no obtienes los resultados esperados, te abriremos nuevas puertas, ya sea con:</p>
+            
+            <ul class="benefit-list">
+                <li>Acceso a entrenamientos adicionales</li>
+                <li>Actualizaciones exclusivas del sistema</li>
+                <li>Nuevas estrategias personalizadas para tu caso</li>
+                <li>Mentoría extendida para guiarte paso a paso</li>
+                <li>Recursos premium que normalmente tienen un costo extra</li>
+            </ul>
+            
+            <p>Es decir, no pierdes dinero... ganas más apoyo, más conocimiento y más oportunidades para lograr tu meta.</p>
+            
+            <h4>Nuestra misión es simple:</h4>
+            <p>Que tengas un mejor porvenir, incluso si tu inicio es más lento de lo esperado.</p>
+            
+            <p style="text-align: center; font-weight: bold; font-size: 1.2rem; margin-top: 25px; color: #0d47a1;">
+                Aquí no caminamos hacia atrás.<br>
+                Aquí te damos más — nunca menos.
+            </p>
         </div>
     </div>
+    
+    <!-- Sección de Miembro Pro y Productos Sleepm -->
+    <section class="pro-membership-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Descubre el Poder del <span style="color: var(--pink);">Miembro Pro</span></h2>
+            
+            <div class="commission-highlight animate-on-scroll">
+                <h3>¡Oportunidad Limitada de Fin de Año!</h3>
+                <p>No solo ganas $50 por sesiones de 45 minutos de relajación, sino que también recibes recompensas cuando tus clientes compran productos Sleepm</p>
+                <div class="commission-amount">¡HASTA $800 POR VENTA!</div>
+                <p>Imagina cuánto podrías estar dejando en la mesa si no aprovechas esta oportunidad</p>
+            </div>
+            
+            <div class="pro-benefits">
+                <div class="pro-benefit-item animate-on-scroll">
+                    <div class="pro-benefit-icon">💎</div>
+                    <h3>Conviértete en Miembro Pro</h3>
+                    <p>Se activa comprando cualquier producto Sleepm como una colchoneta o heating pad</p>
+                    <p>Accede a comisiones exclusivas y mayores ingresos</p>
+                </div>
+                
+                <div class="pro-benefit-item animate-on-scroll">
+                    <div class="pro-benefit-icon">💰</div>
+                    <h3>Ganancias Exponenciales</h3>
+                    <p>Combina ingresos por sesiones de relajación + comisiones por productos</p>
+                    <p>Maximiza tu potencial de ingresos con múltiples fuentes</p>
+                </div>
+                
+                <div class="pro-benefit-item animate-on-scroll">
+                    <div class="pro-benefit-icon">🌟</div>
+                    <h3>Beneficios para Tus Clientes</h3>
+                    <p>Ayúdalos a mejorar su estado de ánimo, aliviar el dolor, dormir mejor y reducir el estrés</p>
+                    <p>Productos que realmente transforman vidas</p>
+                </div>
+            </div>
+            
+            <div class="global-benefit animate-on-scroll">
+                <h3><i class="fas fa-globe-americas"></i> ¡Gana Comisiones Desde Cualquier Parte del Mundo!</h3>
+                <p style="font-size: 1.2rem; margin-top: 15px;">
+                    Cuando eres Miembro Pro, ganas comisiones de <strong>CUALQUIER producto</strong> que el cliente compre, 
+                    desde <strong>CUALQUIER parte del mundo</strong> que el cliente ordene en línea.
+                </p>
+                <p style="font-size: 1.1rem; margin-top: 15px; font-weight: bold;">
+                    ¡Tu potencial de ingresos es literalmente global!
+                </p>
+            </div>
+            
+            <h3 class="section-title animate-on-scroll" style="margin-top: 60px;">Productos Sleepm con Grandes Comisiones</h3>
+            
+            <div class="product-showcase">
+                <div class="product-item animate-on-scroll">
+                    <div class="product-icon">🔥</div>
+                    <div class="promo-badge">PROMOCIÓN FIN DE AÑO</div>
+                    <h4>Heating Pad</h4>
+                    <p>Alivia dolores musculares y mejora la circulación</p>
+                    <div class="product-price">$280 - $600</div>
+                    <p style="font-size: 0.9rem; color: #666;">Comisión por unidad</p>
+                </div>
+                
+                <div class="product-item animate-on-scroll">
+                    <div class="product-icon">🛏️</div>
+                    <div class="promo-badge">OFERTA ESPECIAL</div>
+                    <h4>Colchoneta Sleepm</h4>
+                    <p>Mejora la calidad del sueño y alivia puntos de presión</p>
+                    <div class="product-price">$90 - $800</div>
+                    <p style="font-size: 0.9rem; color: #666;">Comisión por unidad</p>
+                    <p style="font-size: 0.8rem; color: #e74c3c; margin-top: 10px; font-weight: bold;">
+                        ¡Precio especial por tiempo limitado!
+                    </p>
+                </div>
+            </div>
+            
+            <div class="btn-container animate-on-scroll" style="margin-top: 40px;">
+                <a href="https://chat.whatsapp.com/I5BmSPnEkhCArcUeOXIDxR?mode=hqrt1" 
+                   target="_blank" class="btn btn-whatsapp" style="font-size: 1.2rem;">
+                    <i class="fab fa-whatsapp"></i> ÚNETE A LA COMUNIDAD PARA LA PRESENTACIÓN PRO
+                </a>
+            </div>
+            
+            <p style="text-align: center; margin-top: 20px; font-size: 1.1rem;" class="animate-on-scroll">
+                Descubre todos los detalles sobre cómo convertirte en Miembro Pro y maximizar tus ingresos
+            </p>
+        </div>
+    </section>
     
     <!-- Contador de Oferta por Tiempo Limitado -->
     <section class="countdown-section">
@@ -1026,11 +1468,11 @@
             <h2 class="section-title animate-on-scroll" style="color: white;">Tu Futuro Mejor Comienza Ahora</h2>
             
             <!-- Garantía Final -->
-            <div class="guarantee-section" style="background: rgba(255,255,255,0.9); margin: 30px 0;">
-                <h3 style="color: #2e7d32; margin-bottom: 15px;">
+            <div class="new-guarantee-section" style="background: rgba(255,255,255,0.9); margin: 30px 0;">
+                <h3 style="color: #1565c0; margin-bottom: 15px;">
                     <i class="fas fa-lock"></i> Compra 100% Segura
                 </h3>
-                <p style="color: #333;">Protegido por garantía de 30 días. Tu inversión está segura.</p>
+                <p style="color: #333;">Protegido por nuestra Garantía de Transformación de 30 Días. Tu inversión está segura y te aseguramos más oportunidades de crecimiento.</p>
             </div>
             
             <!-- Botones de Acción -->
@@ -1038,6 +1480,11 @@
                 <a href="https://wa.me/+13232850508?text=Hola,%20quiero%20más%20información%20sobre%20VisionDgtal" 
                    target="_blank" class="btn btn-whatsapp">
                     <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                </a>
+                
+                <a href="https://chat.whatsapp.com/I5BmSPnEkhCArcUeOXIDxR?mode=hqrt1" 
+                   target="_blank" class="btn" style="background: var(--pink); color: white;">
+                    <i class="fab fa-whatsapp"></i> Comunidad Miembro Pro
                 </a>
             </div>
             
@@ -1125,14 +1572,108 @@
             });
         });
         
-        // Popup de salida (opcional - descomenta si quieres)
-        /*
-        window.addEventListener('mouseout', function(e) {
-            if (e.clientY < 0) {
-                // Mostrar popup de oferta especial
+        // Funcionalidad del Chatbot
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatbotToggle = document.getElementById('chatbotToggle');
+            const chatbotContainer = document.getElementById('chatbotContainer');
+            const chatbotClose = document.getElementById('chatbotClose');
+            const chatbotMessages = document.getElementById('chatbotMessages');
+            const chatbotInput = document.getElementById('chatbotInput');
+            const chatbotSend = document.getElementById('chatbotSend');
+            const quickQuestions = document.querySelectorAll('.quick-question');
+            
+            // Base de conocimiento del chatbot
+            const knowledgeBase = {
+                "hola": "¡Hola! Soy tu asistente virtual. Estoy aquí para responder tus preguntas sobre nuestro sistema de ingresos. ¿En qué puedo ayudarte?",
+                "funciona sin experiencia": "Sí, el sistema está diseñado específicamente para principiantes. Te proporcionamos plantillas, guías paso a paso y soporte completo para que puedas empezar sin problemas.",
+                "cuándo empiezo a ganar dinero": "Desde el primer día. Muchos miembros reportan su primera ganancia de $50 en las primeras 24 horas. El sistema está diseñado para que obtengas resultados inmediatos.",
+                "necesito invertir más dinero": "No, los $50 son tu única inversión. Todo lo demás está incluido: entrenamientos, herramientas, soporte y acceso a la comunidad.",
+                "qué incluye el sistema": "El sistema incluye: acceso completo a la plataforma, entrenamientos paso a paso, plantillas listas para usar, soporte personalizado, comunidad privada y actualizaciones gratuitas.",
+                "cómo funciona": "Es muy simple: 1) Te registras, 2) Compartes sesiones de bienestar, 3) Ganas $50 por cada sesión + ingresos residuales, 4) El sistema crece automáticamente.",
+                "es seguro": "Totalmente seguro. Utilizamos Stripe, una de las plataformas de pago más seguras del mundo. Además, tu información está protegida y no compartimos tus datos.",
+                "garantía": "Ofrecemos una Garantía de Transformación de 30 días. Si no obtienes resultados, te damos más apoyo, entrenamientos adicionales y mentoría extendida en lugar de reembolsos.",
+                "precio": "El precio especial es de $50 (oferta limitada). Después de que se agoten los cupos, el precio subirá a $100.",
+                "tiempo": "Dedicando 1-2 horas al día puedes empezar a generar ingresos. El sistema está diseñado para adaptarse a tu horario.",
+                "miembro pro": "Para convertirte en Miembro Pro necesitas adquirir cualquier producto Sleepm como una colchoneta o heating pad. Esto te da acceso a comisiones más altas y beneficios exclusivos.",
+                "cómo me convierto en miembro pro": "Para convertirte en Miembro Pro necesitas adquirir cualquier producto Sleepm. Te recomiendo unirte a nuestra comunidad de WhatsApp para la presentación completa: https://chat.whatsapp.com/I5BmSPnEkhCArcUeOXIDxR?mode=hqrt1",
+                "productos sleepm": "Sleepm ofrece productos como heating pads (hasta $600 de comisión) y colchonetas (hasta $800 de comisión por tiempo limitado).",
+                "qué productos de sleepm pagan más": "Actualmente, la colchoneta Sleepm ofrece las comisiones más altas con hasta $800 por unidad durante esta promoción limitada. El heating pad también ofrece excelentes comisiones de hasta $600.",
+                "heating pad": "El Heating Pad de Sleepm es uno de nuestros productos estrella. Con la promoción de fin de año, puedes ganar hasta $600 por cada venta. Ayuda a aliviar dolores musculares y mejorar la circulación.",
+                "colchoneta": "La Colchoneta Sleepm actualmente tiene una promoción especial que paga hasta $800 por unidad. Es una oportunidad limitada para maximizar tus ganancias como Miembro Pro.",
+                "comisiones globales": "¡Como Miembro Pro, ganas comisiones de CUALQUIER producto que tus clientes compren, desde CUALQUIER parte del mundo donde ordenen en línea! Tu potencial de ingresos es verdaderamente global.",
+                "ayuda": "Puedes contactarnos por WhatsApp al +1 323 285 0508 o hacer preguntas específicas aquí en el chat. Estamos para ayudarte.",
+                "gracias": "¡De nada! ¿Tienes alguna otra pregunta? Estoy aquí para ayudarte.",
+                "adiós": "¡Fue un placer ayudarte! Si tienes más preguntas, no dudes en volver. ¡Éxito en tu camino hacia la libertad financiera!"
+            };
+            
+            // Función para encontrar la respuesta más relevante
+            function findAnswer(question) {
+                const lowerQuestion = question.toLowerCase();
+                
+                // Buscar coincidencias exactas primero
+                for (const key in knowledgeBase) {
+                    if (lowerQuestion.includes(key)) {
+                        return knowledgeBase[key];
+                    }
+                }
+                
+                // Respuesta por defecto si no encuentra coincidencia
+                return "Lo siento, no tengo información específica sobre eso. ¿Podrías reformular tu pregunta? También puedes contactarnos por WhatsApp para una respuesta más personalizada: https://wa.me/+13232850508 o unirte a la comunidad Miembro Pro: https://chat.whatsapp.com/I5BmSPnEkhCArcUeOXIDxR?mode=hqrt1";
             }
+            
+            // Función para agregar mensaje al chat
+            function addMessage(text, isUser = false) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+                messageDiv.textContent = text;
+                chatbotMessages.appendChild(messageDiv);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+            
+            // Función para procesar pregunta
+            function processQuestion(question) {
+                addMessage(question, true);
+                chatbotInput.value = '';
+                
+                // Simular "escribiendo..."
+                setTimeout(() => {
+                    const answer = findAnswer(question);
+                    addMessage(answer);
+                }, 1000);
+            }
+            
+            // Event listeners
+            chatbotToggle.addEventListener('click', function() {
+                chatbotContainer.style.display = 'flex';
+            });
+            
+            chatbotClose.addEventListener('click', function() {
+                chatbotContainer.style.display = 'none';
+            });
+            
+            chatbotSend.addEventListener('click', function() {
+                const question = chatbotInput.value.trim();
+                if (question) {
+                    processQuestion(question);
+                }
+            });
+            
+            chatbotInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    const question = chatbotInput.value.trim();
+                    if (question) {
+                        processQuestion(question);
+                    }
+                }
+            });
+            
+            // Preguntas rápidas
+            quickQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    processQuestion(this.getAttribute('data-question'));
+                });
+            });
         });
-        */
     </script>
 </body>
 </html>
